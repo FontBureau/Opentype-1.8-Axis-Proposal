@@ -1,0 +1,89 @@
+html {
+	font-size: 100%;
+}
+body {
+	position: relative;
+	font-size: 100%;
+	margin: 2em;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+p {
+	max-width: 720px;
+}
+
+hr {
+	margin: 2em 0;
+}
+
+.tag {
+	font-family: "Menlo", monospace;
+	padding-right: 0.5em;
+}
+.small {
+	font-size: 1em;
+}
+
+#menu {
+	position: relative;
+	float: none;
+	font-size: 0.875em;
+	line-height: 1em;
+}
+
+#menu li {
+	border-left: 2px solid white;
+	color: grey;
+	padding-left: 0.5em
+}
+
+#menu a {
+	display: inline-block;
+	padding: 0.125em 0.5em;
+	color: dodgerblue;
+}
+
+#menu a:hover {
+	background-color: inherit;
+	color: red;
+}
+
+#menu .active {
+	border-left: 2px solid red;
+	color: black;
+}
+
+#menu .active a {
+	color: red;
+}
+
+ul {
+	list-style: none;
+	line-height: 1.375em;
+	padding-left: 1.5em;
+}
+
+.nav-section {
+	font-weight: bold;
+}
+
+@media screen and (min-width: 1280px) and (min-height: 700px) {
+	#menu {
+		position: sticky;
+		top: 1em;
+		float: right;
+		background-color: white;
+		width: 18em;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	body {
+		margin: 5em;
+	}
+	img {
+		height: 500px;
+	}
+}
