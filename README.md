@@ -38,7 +38,7 @@ These axes allow precise control because their values are related to the em squa
 ### 3. Motion Axes (4)
 
 In 1992, Font Bureau developed Zycon ([demo](http://www.axis-praxis.org/specimens/zycon)) to demonstrate how Variable Fonts can be used for motion typography. 
-The essense of motion is a simple equation:
+The essence of motion is a simple equation:
 
 Distance = Rate × Time
 
