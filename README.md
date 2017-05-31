@@ -1,34 +1,64 @@
 # Font Bureau OpenType 1.8 Variations Axes Proposals
 
-This guide will be presented to the OpenType Variations working group. 
-
 Our goal is to reveal how our useful variations fonts are built from axes that enable optical sizes, variation through time and motion, and multi-script integration (Latin/CJK/Arabic/Hebrew.)
 
-## Summary
+This guide will be presented to the OpenType Variations working group and publicly during Summer 2017.
 
-This axes list contains several different kinds of axes. Nearly every value found in an otf 1.0 to the present, referring to a typographic value in the font, is susceptible to the need for a registered axis to identify that which can be defined as a variation in a font (ytlc and xtab are examples of those). Variations add the possibilities of motion, space and time, and inter-script adjustment, and thus the need for axes to be added for interoperable programmability among variations fonts dealing with animation and parameters specific to non-latin scripts.
-(This seems a lot to register compared to the registration rate so far, which would have left us enough axes to last around 440,000 years. But here are 25 axes, proposed, if the community so chooses to adopt them as standards.)
+### 1. Latin Axes (11)
 
-## Overview
+Typographers are familiar with many attributes of typefaces that express the Latin writing system.
+It is useful for them be available as variation axes so that typographers can control them precisely. 
 
-Our proposal contains several groups for axes registration including: 
+Some attributes are already recorded in fonts conforming to the OpenType v1.0 specification, as values in the OS/2 table 
+(e.g. uppercase cap-height, lowercase x-height, or ascender/descender values.)
+This group proposes new axes for these values. 
 
-1. Existing Latin values (e.g. [y transparent uc] = OT cap height, ), and those Latin values surrounded by these newly registered axis, (e.g. [y opaque]). there are 11 of those.
+It also includes axes for other aspects that are inherent to all writing systems and specific to Latin: 
+Controlling opaque or transparent areas in the X or Y dimensions. 
 
-2. Non-existing, often-shared-with-Latin y values, that require script-specific values for interoperable programmability of inter-script variations, (e.g. [y transparent Kanji]. There are seven of those.
+The OpenType v1.8.0 specification already offers registered (interoperable) axes for weight, width, and optical size. 
+These axes can be created by composing the axes proposed in this section. 
+This technique of constructing those 'higher level' axes by blending together 'lower level' axes means that typographers can control them with high precision. 
 
-3. Non-existing motion-based axes for interoperable programability of variations in motion.
+This set of axes form an inter-related and gestalt system. 
+Registration in the OpenType specification will mean this system becomes interoperable. 
 
-4. Non-existing axes allowing the recoding of morph locations from one glyph to another.
+### 2. Non-Latin Axes (7) 
 
-## Details
+This group is similar to the first group, and extends the gestalt system with additional axes for typographers to better work with multilingual texts. 
+The ability to adjust different fonts made for different writing systems to be used together in harmony is very useful for typographers. 
+Often typographers must compromise in their use of one font to accommodate the requirements of another font, depending on which script is most important to them. 
 
-On each group
+In practice, often the values of these axes will be the same or related to the equivalent Latin axis. 
+There are no existing values in the OpenType v1.7 specification for these aspects. 
 
-1. Universal values for weight [wght], width [wdth], and optical size [opsz], are already present in the specification, representing blends of lower level parameters that make weights, widths, and optical sizes, by standard definition and practice, in fonts of most scripts. Latin uppercase height, lowercase x-height, and several forms of descender and descender values also exist in the otf and so need to be recordable in variations. The proposed x opaque and x transparent axes are more variable OS/2 weight and width values, and y opaque is new. Via all of their registration, interoperability and programability.
+Each script has unique alignment zones in the Y dimension. 
+These axes allow precise control because their values are related to the em square. 
 
-2. This is a short list of script specific values for non-Latin designs that function best on different y proportions of the same em square in the productization phase of fonts, while still being able to share the em square in compromise or in favor of one script in the composition phase of typography via interoperable programatic access to these proposed axes.
+### 3. Motion Axes (4)
 
-3. These are fairly self-explanatory, if a use making animations is to solve the Distance = Rate x Time equation without trial-and-error on each glyph.
+In 1992, Font Bureau developed Zycon ([demo](http://www.axis-praxis.org/specimens/zycon)) to demonstrate how Variable Fonts can be used for motion typography. 
+The essence of motion is a simple equation:
 
-4. There is a need with animatable icons and glyphs, for the identity of unicodes that may vary along an axis to be definable. There is also great interest in supplying the glyphs of one instance from other instance locations in a variation space for glyphs of different features.
+Distance = Rate × Time
+
+These axes enable motion graphics designers to solve this equation without trial-and-error on each glyph.
+
+While some may wonder if Variable Fonts "should" be used in this way. 
+But the fact is that they already are used this way. 
+The question is not about if this might fly, since they are flying already, but if they will fly in a way that is interoperable. 
+
+With registration, reliable UIs can be made for motion graphics applications. 
+
+### 4. Don't Repeat Yourself (2)
+
+These axes are not inter-related as groups 1 and 2 are, but have something in common:
+The idea that good engineering means seeking simplicity and elegance by reducing duplication. 
+
+Many Unicode characters can be expressed by a single glyph with variation along some axis. 
+Therefore it would be good to be able to ask for a given Unicode character and get a position within a glyph's variation space where that character can be found. 
+Similarly, alternate glyphs accessed through OpenType features could also be returned as locations in a variation space instead of duplicate glyph data. 
+And these could be nested, like TrueType components. 
+
+This would provide filesize reductions even within ASCII: 
+A single glyph could express the lowercase o, uppercase O, zero and its OpenType figure feature alternates, and the zeros within the percentage sign. 
