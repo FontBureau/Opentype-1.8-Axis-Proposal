@@ -27,7 +27,7 @@ Registration in the OpenType specification will mean this system becomes interop
 
 This group is similar to the first group, and extends the gestalt system with additional axes for typographers to better work with multilingual texts. 
 The ability to adjust different fonts made for different writing systems to be used together in harmony is very useful for typographers. 
-Often typographers must compromise in their use of one font to accomodate the requirements of another font, depending on which script is most important to them. 
+Often typographers must compromise in their use of one font to accommodate the requirements of another font, depending on which script is most important to them. 
 
 In practice, often the values of these axes will be the same or related to the equivalent Latin axis. 
 There are no existing values in the OpenType v1.7 specification for these aspects. 
