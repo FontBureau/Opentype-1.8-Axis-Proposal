@@ -1,8 +1,8 @@
 # Font Bureau OpenType 1.8 Variations Axes Proposals
 
-This guide will be presented to the OpenType Variations working group. 
-
 Our goal is to reveal how our useful variations fonts are built from axes that enable optical sizes, variation through time and motion, and multi-script integration (Latin/CJK/Arabic/Hebrew.)
+
+This guide will be presented to the OpenType Variations working group and publicly during Summer 2017.
 
 ### 1. Latin Axes (11)
 
@@ -58,5 +58,7 @@ The idea that good engineering means seeking simplicity and elegance by reducing
 Many Unicode characters can be expressed by a single glyph with variation along some axis. 
 Therefore it would be good to be able to ask for a given Unicode character and get a position within a glyph's variation space where that character can be found. 
 Similarly, alternate glyphs accessed through OpenType features could also be returned as locations in a variation space instead of duplicate glyph data. 
+And these could be nested, like TrueType components. 
 
-And these could be nested, like TrueType components. Then for an example within the ASCII glyph set, this would mean a single round glyph's variation space could express the lowercase o, uppercase O, various forms of zero associated with OpenType figures, and the zeros within the percentage sign. 
+This would provide filesize reductions even within ASCII: 
+A single glyph could express the lowercase o, uppercase O, zero and its OpenType figure feature alternates, and the zeros within the percentage sign. 
