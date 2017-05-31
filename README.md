@@ -4,15 +4,6 @@ This guide will be presented to the OpenType Variations working group.
 
 Our goal is to reveal how our useful variations fonts are built from axes that enable optical sizes, variation through time and motion, and multi-script integration (Latin/CJK/Arabic/Hebrew.)
 
-## Summary
-
-This axes list contains several different kinds of axes. Nearly every value found in an otf 1.0 to the present, referring to a typographic value in the font, is susceptible to the need for a registered axis to identify that which can be defined as a variation in a font (ytlc and xtab are examples of those). Variations add the possibilities of motion, space and time, and inter-script adjustment, and thus the need for axes to be added for interoperable programmability among variations fonts dealing with animation and parameters specific to non-latin scripts.
-(This seems a lot to register compared to the registration rate so far, which would have left us enough axes to last around 440,000 years. But here are 25 axes, proposed, if the community so chooses to adopt them as standards.)
-
-## Overview
-
-Our proposal contains several groups for axes registration including: 
-
 ### 1. Latin Axes (11)
 
 Typographers are familiar with many attributes of typefaces that express the Latin writing system.
