@@ -36,7 +36,7 @@ The use of the auto features for bold and italic is now disdained by typographer
 The use of a standard underline effect was famously rejected by Medium, and became a global phenomenon that even the New York Times has adopted. 
 Variation axes can provide decoration effects that refine decoration effects for typographers and give them more precise control that is fine tuned within ranges provided by typeface designers specific to each face, and also simplify the problem for application developers. 
 
-### 2. Non-Latin Axes (7) 
+### 2. Non-Latin Axes (2) 
 
 This group is similar to the first group, and extends the gestalt system with additional axes for typographers to better work with multilingual texts. 
 The ability to adjust different fonts made for different writing systems to be used together in harmony is very useful for typographers. 
