@@ -4,7 +4,7 @@ Our goal is to reveal how our useful variations fonts are built from axes that e
 
 This guide will be presented to the OpenType Variations working group and publicly during Summer 2017.
 
-### 1. Latin Axes (11)
+### 1. Latin Axes (8)
 
 Typographers are familiar with many attributes of typefaces that express the Latin writing system.
 It is useful for them be available as variation axes so that typographers can control them precisely. 
@@ -21,9 +21,22 @@ These axes can be created by composing the axes proposed in this section.
 This technique of constructing those 'higher level' axes by blending together 'lower level' axes means that typographers can control them with high precision. 
 
 This set of axes form an inter-related and gestalt system. 
-Registration in the OpenType specification will mean this system becomes interoperable. 
+While it is useful for each of attribute to be available as variation axis, there is even greater value in having them form a cohesive system. 
+As a set, a [network effect](https://en.wikipedia.org/wiki/Network_effect) is at play. 
+The functionality for typographers increases exponentially as each attribute can be combined with the others, creating myriad possibilities. 
+Registration in the OpenType specification will mean that this system becomes interoperable. 
 
-### 2. Non-Latin Axes (7) 
+### 1.1 Presentation Axes (7)
+
+Typographers apply decoration effects to type to create different forms of (highly stylized) emphasis. 
+In the early days of digital type, many families did not have 'true' italics or bold weights, and application developers wrote auto-bold and auto-slant features, along with drop shadows, underlines, and so on. 
+Since the introduction of TrueType, it has become much more common for type to be distributed in families with 'real' Bold, Italic, and Bold Italic styles. 
+
+The use of the auto features for bold and italic is now disdained by typographers. 
+The use of a standard underline effect was famously rejected by Medium, and became a global phenomenon that even the New York Times has adopted. 
+Variation axes can provide decoration effects that refine decoration effects for typographers and give them more precise control that is fine tuned within ranges provided by typeface designers specific to each face, and also simplify the problem for application developers. 
+
+### 2. Non-Latin Axes (2) 
 
 This group is similar to the first group, and extends the gestalt system with additional axes for typographers to better work with multilingual texts. 
 The ability to adjust different fonts made for different writing systems to be used together in harmony is very useful for typographers. 
