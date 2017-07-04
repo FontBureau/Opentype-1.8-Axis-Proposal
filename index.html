@@ -35,7 +35,7 @@
 	<aside class="content-filters">
 		<a class="content-filters-close" href="#">Close</a>
 		
-		<h3><a href="#licensing">1. 1. Primary Type Axes</a></h3>
+		<h3><a href="#licensing">1. Primary Type Axes</a></h3>
 		<ul>
 			<li><a href="#xtra">1. xtra</a></li>
 			<li><a href="#xopq">2. xopq</a></li>
@@ -45,28 +45,25 @@
 			<li><a href="#ytuc">6. ytuc</a></li>
 			<li><a href="#ytde">7. ytde</a></li>
 			<li><a href="#ytas">8. ytas</a></li>
-		</ul>
-		<h3><a href="#licensing">1.1 Primary Type Axes</a></h3>
-		<ul>
 			<li><a href="#xtab">9. xtab</a></li>
-			<li><a href="#udln">10. udln</a></li>
-			<li><a href="#shdw">11. shdw</a></li>
-			<li><a href="#refl">12. refl</a></li>
-			<li><a href="#otln">13. otln</a></li>
-			<li><a href="#engr">14. engr</a></li>
-			<li><a href="#embo">15. embo</a></li>
+			<li><a href="#ytch">10. ytch</a></li>
+			<li><a href="#xtch">11. xtch</a></li>
+			<li><a href="#vrot">12. vrot</a></li>
 		</ul>
-		<h3><a href="#licensing">2. Non Latin Axes</a></h3>
+		<h3><a href="#licensing">2. Effects Axes</a></h3>
 		<ul>
-			<li><a href="#ytch">16. ytch</a></li>
-			<li><a href="#xtch">17. xtch</a></li>
+			<li><a href="#udln">13. udln</a></li>
+			<li><a href="#shdw">14. shdw</a></li>
+			<li><a href="#refl">15. refl</a></li>
+			<li><a href="#otln">16. otln</a></li>
+			<li><a href="#engr">17. engr</a></li>
+			<li><a href="#embo">18. embo</a></li>
 		</ul>
 		<h3><a href="#licensing">3. Motion Axes</a></h3>
 		<ul>
-			<li><a href="#rxad">18. rxad</a></li>
-			<li><a href="#ryad">19. ryad</a></li>
-			<li><a href="#rsec">20. rsec</a></li>
-			<li><a href="#vrot">21. vrot</a></li>
+			<li><a href="#rxad">19. rxad</a></li>
+			<li><a href="#ryad">20. ryad</a></li>
+			<li><a href="#rsec">21. rsec</a></li>
 		</ul>
 		<h3><a href="#licensing">4. Glyph Axes</a></h3>
 		<ul>
@@ -297,9 +294,9 @@
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-ytas.gif" />
-	
+				
 				<hr>
-	
+				
 				<h3 id="xtab">9. xtab</h3>
 				<p>
 				<b>Tag:</b> xtab<br>
@@ -314,10 +311,61 @@
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-xtab.gif" />
+				
+				<hr>
+				
+				<h3 id="ytch">10. ytch</h3>
+				<p>
+				<b>Tag:</b> ytch<br>
+				<b>Name:</b> y transparent Chinese<br>
+				<b>Description:</b> values represent the height of Chinese glyphs<br>
+				<b>Valid numeric range:</b> 1 to 2400<br>
+				<b>Scale interpretation:</b> Values can be interpreted as per-mille-of-em changes, between any instances in the axis<br>
+				<b>Recommended ‘normal’ value:</b> Sample value 950<br>
+				<b>Suggested programmatic interactions:</b> Applications may choose to select a variant in connection to an input for more or less ytch, or it might be programmatically used<br>
+				<b>Suggested user interactions:</b> User may chose a variant to modify the width of the type<br>
+				<b>Related axis information:</b> User may chose a variant to modify the width of the type<br>
+				</p>
+				<h4>Demo</h4>
+				<img src="images/animation-ytch.gif" />
 	
 				<hr>
 	
-				<h3 id="udln">10. udln</h3>
+				<h3 id="xtch">11. xtch</h3>
+				<p>
+				<b>Tag:</b> xtch<br>
+				<b>Name:</b> x transparent Chinese<br>
+				<b>Description:</b> values represent the width of Chinese glyphs<br>
+				<b>Valid numeric range:</b> 1 to 8000<br>
+				<b>Scale interpretation:</b> Values can be interpreted as per-mille-of-em changes, between any instances in the axis<br>
+				<b>Recommended ‘normal’ value:</b> Sample value 950<br>
+				<b>Suggested programmatic interactions:</b> Applications may choose to select a variant in connection to an input for more or less xtch, or it might be programmatically used<br>
+				<b>Suggested user interactions:</b> User may chose a variant to modify the height of the type<br>
+				<b>Related axis information:</b> User may chose a variant to modify the height of the type<br>
+				</p>
+				<h4>Demo</h4>
+				<img src="images/animation-xtch.gif" />
+	
+				<hr>
+				
+				<h3 id="vrot">12. vrot</h3>
+				<p>
+				<b>Tag:</b> vrot<br>
+				<b>Name:</b> glyph rotation axis<br>
+				<b>Description:</b> assigns a value to each instance of the axis<br>
+				<b>Valid numeric range:</b> -360.00 to 360.00<br>
+				<b>Scale interpretation:</b> Values can be interpreted as degrees of rotation from the default, which is zero<br>
+				<b>Recommended ‘normal’ value:</b> Default fonts should be set at 0 degrees<br>
+				<b>Suggested programmatic interactions:</b> Applications may choose to select a variant in connection to an input for ccw or cw vrot, or it might be programmatically used.<br>
+				<b>Suggested user interactions:</b> Users may choose to program a variant for direct input, or via a user interface connection. <br>
+				<b>Related axis information:</b> Users may choose to program a variant for direct input, or via a user interface connection. <br>
+				</p>
+				<h4>Demo</h4>
+				<img src="images/animation-vrot.gif" />
+	
+				<hr>
+	
+				<h3 id="udln">13. udln</h3>
 				<p>
 				<b>Tag:</b> udln<br>
 				<b>Name:</b> Underline<br>
@@ -334,7 +382,7 @@
 	
 				<hr>
 	
-				<h3 id="shdw">11. shdw</h3>
+				<h3 id="shdw">14. shdw</h3>
 				<p>
 				<b>Tag:</b> shdw<br>
 				<b>Name:</b> Shadow depth<br>
@@ -351,7 +399,7 @@
 	
 				<hr>
 	
-				<h3 id="refl">12. refl</h3>
+				<h3 id="refl">15. refl</h3>
 				<p>
 				<b>Tag:</b> refl<br>
 				<b>Name:</b> Reflect<br>
@@ -369,7 +417,7 @@
 	
 				<hr>
 	
-				<h3 id="otln">13. otln</h3>
+				<h3 id="otln">16. otln</h3>
 				<p>
 				<b>Tag:</b> otln<br>
 				<b>Name:</b> Outline value<br>
@@ -386,7 +434,7 @@
 	
 				<hr>
 	
-				<h3 id="engr">14. engr</h3>
+				<h3 id="engr">17. engr</h3>
 				<p>
 				<b>Tag:</b> engr<br>
 				<b>Name:</b> Engraving value<br>
@@ -403,7 +451,7 @@
 	
 				<hr>
 	
-				<h3 id="embo">15. embo</h3>
+				<h3 id="embo">18. embo</h3>
 				<p>
 				<b>Tag:</b> embo<br>
 				<b>Name:</b> emboss depth<br>
@@ -420,41 +468,7 @@
 	
 				<hr>
 	
-				<h3 id="ytch">16. ytch</h3>
-				<p>
-				<b>Tag:</b> ytch<br>
-				<b>Name:</b> y transparent Chinese<br>
-				<b>Description:</b> values represent the height of Chinese glyphs<br>
-				<b>Valid numeric range:</b> 1 to 2400<br>
-				<b>Scale interpretation:</b> Values can be interpreted as per-mille-of-em changes, between any instances in the axis<br>
-				<b>Recommended ‘normal’ value:</b> Sample value 950<br>
-				<b>Suggested programmatic interactions:</b> Applications may choose to select a variant in connection to an input for more or less ytch, or it might be programmatically used<br>
-				<b>Suggested user interactions:</b> User may chose a variant to modify the width of the type<br>
-				<b>Related axis information:</b> User may chose a variant to modify the width of the type<br>
-				</p>
-				<h4>Demo</h4>
-				<img src="images/animation-ytch.gif" />
-	
-				<hr>
-	
-				<h3 id="xtch">17. xtch</h3>
-				<p>
-				<b>Tag:</b> xtch<br>
-				<b>Name:</b> x transparent Chinese<br>
-				<b>Description:</b> values represent the width of Chinese glyphs<br>
-				<b>Valid numeric range:</b> 1 to 8000<br>
-				<b>Scale interpretation:</b> Values can be interpreted as per-mille-of-em changes, between any instances in the axis<br>
-				<b>Recommended ‘normal’ value:</b> Sample value 950<br>
-				<b>Suggested programmatic interactions:</b> Applications may choose to select a variant in connection to an input for more or less xtch, or it might be programmatically used<br>
-				<b>Suggested user interactions:</b> User may chose a variant to modify the height of the type<br>
-				<b>Related axis information:</b> User may chose a variant to modify the height of the type<br>
-				</p>
-				<h4>Demo</h4>
-				<img src="images/animation-xtch.gif" />
-	
-				<hr>
-	
-				<h3 id="rxad">18. rxad</h3>
+				<h3 id="rxad">19. rxad</h3>
 				<p>
 				<b>Tag:</b> rxad<br>
 				<b>Name:</b> relative x advance<br>
@@ -471,7 +485,7 @@
 	
 				<hr>
 	
-				<h3 id="ryad">19. ryad</h3>
+				<h3 id="ryad">20. ryad</h3>
 				<p>
 				<b>Tag:</b> ryad<br>
 				<b>Name:</b> relative y advance<br>
@@ -488,7 +502,7 @@
 	
 				<hr>
 	
-				<h3 id="rsec">20. rsec</h3>
+				<h3 id="rsec">21. rsec</h3>
 				<p>
 				<b>Tag:</b> rsec<br>
 				<b>Name:</b> relative second<br>
@@ -502,23 +516,6 @@
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-rsec.gif" />
-	
-				<hr>
-	
-				<h3 id="vrot">21. vrot</h3>
-				<p>
-				<b>Tag:</b> vrot<br>
-				<b>Name:</b> glyph rotation axis<br>
-				<b>Description:</b> assigns a value to each instance of the axis<br>
-				<b>Valid numeric range:</b> -360.00 to 360.00<br>
-				<b>Scale interpretation:</b> Values can be interpreted as degrees of rotation from the default, which is zero<br>
-				<b>Recommended ‘normal’ value:</b> Default fonts should be set at 0 degrees<br>
-				<b>Suggested programmatic interactions:</b> Applications may choose to select a variant in connection to an input for ccw or cw vrot, or it might be programmatically used.<br>
-				<b>Suggested user interactions:</b> Users may choose to program a variant for direct input, or via a user interface connection. <br>
-				<b>Related axis information:</b> Users may choose to program a variant for direct input, or via a user interface connection. <br>
-				</p>
-				<h4>Demo</h4>
-				<img src="images/animation-vrot.gif" />
 	
 				<hr>
 	
