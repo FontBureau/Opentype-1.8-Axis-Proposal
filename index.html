@@ -86,33 +86,33 @@
 		
 				<h2>Variations Proposal Introduction</h2>
 
-				<p>This guide has been prepared for presentation to the public, the specification's owners, and the OpenType Variations working group in July 2017. Our goal is to record what we have learned and applied about variable fonts that we believe are generally useful to the specification, and to propose a new, systematic approach to registering and using axes.</p>
-				<p>The proposal does not seek to classify the designs of typefaces parametrically, only what the values of the parameters are. And, this proposal is offered as a beginning, suggesting the need for, but not containing proposal for many important attributes of non-Latin fonts. </p>
-				<p>The registration of the axes here, is also intended to be used as part of a system including the registration of what function an axis performs for programs and/or users along the existing path from script selection to the rendered glyph in a document, a.k.a. the Mantra. Documentation of that part of the system, including the registration of what function an axis provides, is in development and will follow.</p>
+				<p>This guide was prepared in July 2017 for presentation to the public, the specification’s owners, and the OpenType Variations working group. Our goal is to record what we have learned about variable fonts and have put into practice, which we believe will be generally useful to the specification, and to propose a new, systematic approach to registering and using axes.</p>
+				<p>This proposal does not seek to classify the designs of typefaces parametrically, only what the values of the parameters are. Furthermore, it is offered as a beginning, suggesting the need for—but not containing—suggestions for many important attributes of non-Latin fonts. </p>
+				<p>The registration of the axes here is also intended to be used as part of a system including the registration of what function an axis performs for programs and/or users along the existing path from script selection to the rendered glyph in a document, aka the Mantra. Documentation of that part of the system, including the registration of what function an axis provides, is still in development and will follow soon.</p>
 
 				<h3>A. Primary Type Axes</h3>
-				<p>Type users are familiar with the attributes of a typeface family that combine to make its appearance. It has been customary for these attributes to be available as named and instantiated styles in font families. Some of these attributes are already recorded in fonts conforming to the OpenType v1.0 specification, as values in the OS/2 table, and in other tables of the SFNT format in general.</p>
-				<p>Today's font families contain instances pertaining to attributes of registered axes of OpenType, like width, weight, and optical size. In addition, some existing font families contain instances pertaining to grades, descender length, multi-script font mixing for different vertical proportions, and font families contain instances made for specific output, or with specific data to suite particular platform requirements. </p>
-				<p>This proposal is for a new and more complete set of typographic axes, with a unified value system, concern for non-Latin, responsive typography, compression, and more. The registration of a full set of attributes allows type developers to combine the modern, potentially much larger font family into a single file; it allows software developers and educators to have a clearer picture of how typography forms from the basic attributes; and it allows type users to control the attributes more precisely, whether that control is programmatic or via UI.</p>
+				<p>Type users are familiar with the attributes of a typeface family that combine to make up its appearance. Traditionally, these attributes are available as named and instantiated styles in font families. Some of these attributes are already recorded in fonts conforming to the OpenType v1.0 specification, as values in the OS/2 table, and in other tables of the SFNT format in general.</p>
+				<p>Today's font families contain instances pertaining to attributes of registered axes of OpenType, like width, weight, and optical size. In addition, some existing font families contain instances pertaining to grades, descender length, multiscript font mixing for different vertical proportions, and font families contain instances made for specific output, or with specific data to suite particular platform requirements. </p>
+				<p>This proposal is for a new and more complete set of typographic axes, with a unified value system, concern for non-Latin, responsive typography, compression, and more. The registration of a full set of attributes allows type developers to combine the modern, potentially much larger font family into a single file; it allows software developers and educators to have a clearer picture of how typography is shaped by the basic attributes; and it allows type users to control the attributes more precisely, whether that control is programmatic or manual via a user interface.</p>
 
 				<h3>B. Treatment Axes</h3>
-				<p>Many treatments of typography — outlining or underlining, as well as drop shadows and more — are currently available to users via page description languages and applications, where only a uniform, size-independent transformation of all the glyphs of an instance is the result. </p>
-				<p>Knowing that fonts usually provide a better solution than smearing regular type for “bold” or oblique-ing it for “italic, and that optical size, the most common treatment of all, is a registered axis, variation axes can provide these and other treatments better than applications, giving users more precise control per treatment, and per glyph, while also providing information to applications that these axes exist, and what their value systems are, as well as relieving apps from having to provide the treatment, should the user desire to do so, with the font providing the means.</p>
+				<p>Many treatments of typography—outlining or underlining, as well as adding drop shadows and more—are currently available to users via page description languages and applications, where only a uniform, size-independent transformation of all the glyphs of an instance is the result. </p>
+				<p>Because fonts usually provide a better solution than smearing regular type for “bold” or “obliquing” it for “italic,” and because optical size (the most common treatment of all) is a registered axis, variation axes can provide these and other treatments better than applications. This gives users more precise control per treatment, and per glyph, while also informing applications that these axes exist, and what their value systems are. It also relieves apps from having to provide the treatment, should the user desire to do so, with the font providing the means.</p>
 
 				<h3>C. Non-Latin Axes</h3>
-				<p>Today's multi-script type designer faces two major options when mixing more than one script in a typeface family: to compromise one or compromise both scripts to the ideals of the other (that's one thing;) ) or to make multiple instances of the font to provide un-compromised versions of each. </p>
-				<p>The compromises occur in all of the typographic parameters listed in A above, and surface in the choices that need to be made in presenting a unified appearance of width, weight, and height among glyphs of different scripts. These compromises come in a variety of sizes, from small, as when Latin and Cyrillic need to work together, to large, as when Chinese and Arabic have to work together. And of course there are the super-sized compromises in OS fonts, where the typeface family contains 53 scripts.</p>
-				<p>In these scenarios, the type developer is challenged to come up with a single harmonious solution, per size, to the weights and widths of each glyph, in order to form the correct relationship between transparent and opaque across all the glyphs of the scripts involved. And if the user does not like the type designer’s solutions, they are free to roam the width and weight axes and programmatically, or manually, redefine the inter-script solutions to weight and width. It is important to understand that this option is open to the type developer and user without script-specific opaque and transparent attributes, because the proper weight and width per style are solvable in the hands of developers and users without registered weight axes for every script. </p>
-				<p>Alignments operate differently in typography. So in variable fonts they must be able to operate independently of each other at any given weight, width, and size, ahead of whatever decisions occur in those attributes. Up until now, all the scripts of Unicode have shared what could be read as Latin alignments in the OpenType spec. </p>
-				<p>This proposal does not prevent type developers from continuing to share one set of registered alignments among all the scripts of Unicode. What it suggests is that if variable font developers want to maintain compression, performance, and quality in multi-script design, then registered axes for the alignments specific to each script are required. And Chinese alignment values that are definable independent of Latin alignment values are a good place to start.</p>
+				<p>Today’s multiscript type designer faces two major options when mixing more than one script in a typeface family: to compromise one or both scripts to the ideals of the other; or, alternatively, to make multiple instances of the font to provide uncompromised versions of each. </p>
+				<p>The compromises occur in all of the typographic parameters listed in <b>A. Primary Type Axes</b>, and surface in the choices that need to be made in presenting a unified appearance of width, weight, and height among glyphs of different scripts. These compromises come in a variety of sizes, from small (as when Latin and Cyrillic need to work together) to large (as when Chinese and Arabic have to work together). And, of course, there are the supersized compromises in OS fonts, where the typeface family contains fifty-three scripts.</p>
+				<p>In these scenarios, the type developer is challenged to come up with a single harmonious solution, per size, to the weights and widths of each glyph, in order to form the correct relationship between transparent and opaque across all of the glyphs of the scripts involved. If users don’t like the type designer’s solutions, they are free to roam the width and weight axes and either programmatically or manually redefine the interscript solutions to weight and width. It’s important to understand that this option is open to the type developer and user without script-specific opaque and transparent attributes, because the proper weight and width per style are solvable in the hands of developers and users without registered weight axes for every script. </p>
+				<p>Alignments operate differently in typography. So in variable fonts, they must be able to operate independently of one another at any given weight, width, and size, ahead of whatever decisions occur in those attributes. Until now, all of the scripts of Unicode have shared what could be read as Latin alignments in the OpenType spec. </p>
+				<p>This proposal does not prevent type developers from continuing to share one set of registered alignments among all the scripts of Unicode. Rather, it suggests that if variable font developers want to maintain compression, performance, and quality in multiscript design, then registered axes for the alignments specific to each script are required. And Chinese alignment values that are definable independently of Latin alignment values are a good place to start.</p>
 
 				<h3>D. Motion Axes</h3>
-				<p>The essence of designing realistic motion in media with variable fonts requires giving users and programs a simple solution to the equation: Distance = Rate × Time. The proposed axes enable type developers to define the distances their animations move per cycle of animation, so motion graphics designers can solve this equation relative to size of use without trial-and-error on each glyph.</p>
-				<p>As Variations will undoubtably be put to the task of Variations, these axes create a common meeting point between design and use of functionality.</p>
+				<p>The essence of designing realistic motion in media with variable fonts requires giving users and programs a simple solution to the following equation: Distance = Rate × Time. The proposed axes enable type developers to define the distances their animations move per cycle of animation, so motion-graphics designers can solve this equation relative to size of use without trial and error on each glyph.</p>
+				<p>As variations will undoubtedly be put to the task of animation, these axes create a common meeting point between design and use.</p>
 
 				<h3>E. Glyph Axes</h3>
-				<p>The existing OpenType specification allows composites, i.e., reference from a glyph to use another glyph, possibly repositioned or otherwise transformed, to save space and time in the development of fonts using the same shape repeatedly. </p>
-				<p>In traditional type founding, a font developer would not hesitate to create fractions using a glyph from a smaller size master of the same style. In variable fonts, using the same contours of a glyph repeatedly, with deltas for weight, width, and optical size, opens up the possibility of using those and other instances for many such purposes, but only if the developer can pinpoint the instance location ​​of particular glyphs, or glyphs of a particular feature, along a registered axis.</p>
+				<p>The existing OpenType specification allows composites—i.e., reference from a glyph to use another glyph, possibly repositioned or otherwise transformed—to save space and time when developing fonts that repeatedly use the same shape. </p>
+				<p>In traditional typefounding, a font developer would not hesitate to create fractions by using a glyph from a smaller master of the same style. In variable fonts, using the same contours of a glyph repeatedly (with deltas for weight, width, and optical size) opens up the possibility of using those and other instances for many such purposes, but only if the developer can pinpoint the instance location ​​of particular glyphs, or glyphs of a particular feature, along a registered axis.</p>
 			
 				<hr>
 			
@@ -122,11 +122,11 @@
 				<b>Name:</b> x transparent<br>
 				<b>Description:</b> assigns a “white” per mille value to each instance of the design space<br>
 				<b>Valid numeric range:</b> -1000 to 2000<br>
-				<b>Scale interpretation:</b> Values can be interpreted as per-mille-of-em<br>
-				<b>Recommended ‘normal’ value:</b> Sample value 400<br>
-				<b>Suggested programmatic interactions:</b> Applications may choose to select a variant in connection to an input, or it might be programmatically used<br>
-				<b>Suggested user interactions:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface<br>
-				<b>Related axis information:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface<br>
+				<b>Scale interpretation:</b> values can be interpreted as per-mille-of-em<br>
+				<b>Recommended “normal” value:</b> sample value 400<br>
+				<b>Suggested programmatic interactions:</b> applications may choose to select a variant in connection with an input, or it may be programmatically used<br>
+				<b>Suggested user interactions:</b> users may choose to program a variant in connection with direct or conjunctive input for a page description language, or via a user interface<br>
+				<b>Related axis information:</b> users may choose to program a variant in connection with direct or conjunctive input for a page description language, or via a user interface<br>
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-xtra.gif" />
@@ -139,11 +139,11 @@
 				<b>Name:</b> x opaque<br>
 				<b>Description:</b> assigns a “black” per mille value to each instance of the design space<br>
 				<b>Valid numeric range:</b> -1000 to 2000<br>
-				<b>Scale interpretation:</b> Values can be interpreted as per-mille-of-em<br>
-				<b>Recommended ‘normal’ value:</b> Sample value 88<br>
-				<b>Suggested programmatic interactions:</b> Applications may choose to select a variant in connection to an input or it might be programmatically used<br>
-				<b>Suggested user interactions:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface<br>
-				<b>Related axis information:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface<br>
+				<b>Scale interpretation:</b> values can be interpreted as per-mille-of-em<br>
+				<b>Recommended “‘normal”’ value:</b> sample value 88<br>
+				<b>Suggested programmatic interactions:</b> aApplications may choose to select a variant in connection withto an input or it maymight be programmatically used<br>
+				<b>Suggested user interactions:</b> uUsers may choose to program a variant in connection withto direct or conjunctive input for a page description language, or via a user interface<br>
+				<b>Related axis information:</b> uUsers may choose to program a variant in connection withto direct or conjunctive input for a page description language, or via a user interface<br>
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-xopq.gif" />
@@ -156,11 +156,11 @@
 				<b>Name:</b> y transparent<br>
 				<b>Description:</b> assigns an overall “white” per mille value to each instance<br>
 				<b>Valid numeric range:</b> 0 to 2000<br>
-				<b>Scale interpretation:</b> Values can be interpreted as per-mille-of-em<br>
-				<b>Recommended ‘normal’ value:</b> Sample value 884<br>
-				<b>Suggested programmatic interactions:</b> Applications may choose to select a variant in connection to an inpu, or it might be programmatically used<br>
-				<b>Suggested user interactions:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface<br>
-				<b>Related axis information:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface<br>
+				<b>Scale interpretation:</b> vValues can be interpreted as per-mille-of-em<br>
+				<b>Recommended “‘normal”’ value:</b> sSample value 884<br>
+				<b>Suggested programmatic interactions:</b> aApplications may choose to select a variant in connection withto an input, or it maymight be programmatically used<br>
+				<b>Suggested user interactions:</b> uUsers may choose to program a variant in connection withto direct or conjunctive input for a page description language, or via a user interface<br>
+				<b>Related axis information:</b> uUsers may choose to program a variant in connection withto direct or conjunctive input for a page description language, or via a user interface<br>
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-ytra.gif" />
@@ -173,11 +173,11 @@
 				<b>Name:</b> y opaque<br>
 				<b>Description:</b> assigns a “black” per mille value to each instance of the design space<br>
 				<b>Valid numeric range:</b> -1000 to 2000<br>
-				<b>Scale interpretation:</b> Values can be interpreted as per-mille-of-em<br>
-				<b>Recommended ‘normal’ value:</b> Sample value 116<br>
-				<b>Suggested programmatic interactions:</b> Applications may choose to select a variant in connection to an input or it may be programmatically used.<br>
-				<b>Suggested user interactions:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface<br>
-				<b>Related axis information:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface<br>
+				<b>Scale interpretation:</b> vValues can be interpreted as per-mille-of-em<br>
+				<b>Recommended “‘normal”’ value:</b> sSample value 116<br>
+				<b>Suggested programmatic interactions:</b> aApplications may choose to select a variant in connection withto an input or it may be programmatically used.<br>
+				<b>Suggested user interactions:</b> uUsers may choose to program a variant in connection withto direct or conjunctive input for a page description language, or via a user interface<br>
+				<b>Related axis information:</b> uUsers may choose to program a variant in connection with direct or conjunctive input for a page description language, or via a user interface<br>
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-yopq.gif" />
@@ -191,10 +191,10 @@
 				<b>Description:</b> assigns a “white” per mille value to each instance of the design space<br>
 				<b>Valid numeric range:</b> 0 to 1000<br>
 				<b>Scale interpretation:</b> Values can be interpreted as per-mille-of-em<br>
-				<b>Recommended ‘normal’ value:</b> Sample value, 500<br>
-				<b>Suggested programmatic interactions:</b> Applications may choose to select a variant in connection to an input, or it might be programmatically used.<br>
-				<b>Suggested user interactions:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface<br>
-				<b>Related axis information:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface<br>
+				<b>Recommended “normal” value:</b> Sample value, 500<br>
+				<b>Suggested programmatic interactions:</b> Applications may choose to select a variant in connection with an input, or it may be programmatically used.<br>
+				<b>Suggested user interactions:</b> users may choose to program a variant in connection with direct or conjunctive input for a page description language, or via a user interface<br>
+				<b>Related axis information:</b> users may choose to program a variant in connection with direct or conjunctive input for a page description language, or via a user interface<br>
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-ytlc.gif" />
@@ -205,13 +205,13 @@
 				<p>
 				<b>Tag:</b> ytuc<br>
 				<b>Name:</b> y transparent uppercase<br>
-				<b>Description:</b> a “white” per mille value for each Uppercase Height in the design space<br>
+				<b>Description:</b> a “white” per mille value for each uppercase height in the design space<br>
 				<b>Valid numeric range:</b> -1000 to 1000<br>
-				<b>Scale interpretation:</b> Values can be interpreted as per-mille-of-em<br>
-				<b>Recommended ‘normal’ value:</b> Sample value 725<br>
-				<b>Suggested programmatic interactions:</b> Applications may choose to select a variant in connection to an input or it might be programmatically used.<br>
-				<b>Suggested user interactions:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface<br>
-				<b>Related axis information:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface<br>
+				<b>Scale interpretation:</b> values can be interpreted as per-mille-of-em<br>
+				<b>Recommended “normal” value:</b> sample value 725<br>
+				<b>Suggested programmatic interactions:</b> applications may choose to select a variant in connection with an input or it may be programmatically used.<br>
+				<b>Suggested user interactions:</b> users may choose to program a variant in connection with direct or conjunctive input for a page description language, or via a user interface<br>
+				<b>Related axis information:</b> users may choose to program a variant in connection with direct or conjunctive input for a page description language, or via a user interface<br>
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-ytuc.gif" />
@@ -224,11 +224,11 @@
 				<b>Name:</b> y transparent descender<br>
 				<b>Description:</b> assigns a “white” per mille value to each instance of the design space<br>
 				<b>Valid numeric range:</b> -1000 to 0<br>
-				<b>Scale interpretation:</b> Values can be interpreted as per-mille-of-em<br>
-				<b>Recommended ‘normal’ value:</b> Sample value -250<br>
-				<b>Suggested programmatic interactions:</b> Applications may choose to select a variant in connection to input, or i the axis be programmatically used with input like line-spacing<br>
-				<b>Suggested user interactions:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface<br>
-				<b>Related axis information:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface<br>
+				<b>Scale interpretation:</b> values can be interpreted as per-mille-of-em<br>
+				<b>Recommended “normal” value:</b> sample value -250<br>
+				<b>Suggested programmatic interactions:</b> applications may choose to select a variant in connection with input, or the axis may be programmatically used with input like linespacing<br>
+				<b>Suggested user interactions:</b> users may choose to program a variant in connection with direct or conjunctive input for a page description language, or via a user interface<br>
+				<b>Related axis information:</b> users may choose to program a variant in connection with direct or conjunctive input for a page description language, or via a user interface<br>
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-ytde.gif" />
@@ -241,11 +241,11 @@
 				<b>Name:</b> y transparent ascender <br>
 				<b>Description:</b> assigns a “white” per mille value to each instance of the design space<br>
 				<b>Valid numeric range:</b> 0 to 1000<br>
-				<b>Scale interpretation:</b> Values can be interpreted as per-mille-of-em<br>
-				<b>Recommended ‘normal’ value:</b> Sample value 750<br>
-				<b>Suggested programmatic interactions:</b> Applications may choose to select a variant in connection to an input, or it might be programmatically used<br>
-				<b>Suggested user interactions:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface<br>
-				<b>Related axis information:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface<br>
+				<b>Scale interpretation:</b> values can be interpreted as per-mille-of-em<br>
+				<b>Recommended “normal” value:</b> sample value 750<br>
+				<b>Suggested programmatic interactions:</b> applications may choose to select a variant in connection with an input, or it may be programmatically used<br>
+				<b>Suggested user interactions:</b> users may choose to program a variant in connection with direct or conjunctive input for a page description language, or via a user interface<br>
+				<b>Related axis information:</b> users may choose to program a variant in connection with direct or conjunctive input for a page description language, or via a user interface<br>
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-ytas.gif" />
@@ -256,13 +256,13 @@
 				<p>
 				<b>Tag:</b> xtab<br>
 				<b>Name:</b> tabular width<br>
-				<b>Description:</b> Axis contains a per mille value to each monospace or tabular instance<br>
-				<b>Valid numeric range:</b> 1 to 4,000<br>
-				<b>Scale interpretation:</b> Values can be interpreted as per-mille-of-em changes, between any instances in the design space<br>
-				<b>Recommended ‘normal’ value:</b> Sample value 500<br>
-				<b>Suggested programmatic interactions:</b> Applications except monospace setting, and such a width can vary along axis.<br>
-				<b>Suggested user interactions:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface.<br>
-				<b>Related axis information:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface.<br>
+				<b>Description:</b> axis contains a per-mille value for each monospace or tabular instance<br>
+				<b>Valid numeric range:</b> 1 to 4000<br>
+				<b>Scale interpretation:</b> values can be interpreted as per-mille-of-em changes, between any instances in the design space<br>
+				<b>Recommended “normal” value:</b> sample value 500<br>
+				<b>Suggested programmatic interactions:</b> applications accept monospace setting, and such a width can vary along axis.<br>
+				<b>Suggested user interactions:</b> users may choose to program a variant in connection with direct or conjunctive input for a page description language, or via a user interface.<br>
+				<b>Related axis information:</b> users may choose to program a variant in connection with direct or conjunctive input for a page description language, or via a user interface.<br>
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-xtab.gif" />
@@ -275,11 +275,11 @@
 				<b>Name:</b> glyph rotation axis<br>
 				<b>Description:</b> assigns a value to each instance of the axis<br>
 				<b>Valid numeric range:</b> -360.00 to 360.00<br>
-				<b>Scale interpretation:</b> Values can be interpreted as degrees of rotation from the default, which is zero<br>
-				<b>Recommended ‘normal’ value:</b> Default fonts should be set at 0 degrees<br>
-				<b>Suggested programmatic interactions:</b> Applications may choose to select a variant in connection to an input for ccw or cw vrot, or it might be programmatically used.<br>
-				<b>Suggested user interactions:</b> Users may choose to program a variant for direct input, or via a user interface connection. <br>
-				<b>Related axis information:</b> Users may choose to program a variant for direct input, or via a user interface connection. <br>
+				<b>Scale interpretation:</b> values can be interpreted as degrees of rotation from the default, which is zero<br>
+				<b>Recommended “normal” value:</b> default fonts should be set at 0 degrees<br>
+				<b>Suggested programmatic interactions:</b> applications may choose to select a variant in connection with an input for <code>ccw</code> or <code>cw vrot</code>, or it may be programmatically used.<br>
+				<b>Suggested user interactions:</b> users may choose to program a variant for direct input, or via a user interface connection <br>
+				<b>Related axis information:</b> users may choose to program a variant for direct input, or via a user interface connection <br>
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-vrot.gif" />
@@ -289,14 +289,14 @@
 				<h3 id="udln">11. udln</h3>
 				<p>
 				<b>Tag:</b> udln<br>
-				<b>Name:</b> Underline<br>
+				<b>Name:</b> underline<br>
 				<b>Description:</b> values for weight of an underline<br>
 				<b>Valid numeric range:</b> 1 to 1000<br>
-				<b>Scale interpretation:</b> Values can be interpreted as per-mille-of-em<br>
-				<b>Recommended ‘normal’ value:</b> Sample value for a Sans regular Latin would be 120<br>
-				<b>Suggested programmatic interactions:</b> Applications may use the underline axis, or it may inform instance-making software of underline value and location.<br>
-				<b>Suggested user interactions:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface.<br>
-				<b>Related axis information:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface.<br>
+				<b>Scale interpretation:</b> values can be interpreted as per-mille-of-em<br>
+				<b>Recommended “normal” value:</b> sample value for a sans regular Latin would be 120<br>
+				<b>Suggested programmatic interactions:</b> applications may use the underline axis, or it may inform instance-making software of underline value and location<br>
+				<b>Suggested user interactions:</b> users may choose to program a variant in connection with direct or conjunctive input for a page description language, or via a user interface<br>
+				<b>Related axis information:</b> users may choose to program a variant in connection with direct or conjunctive input for a page description language, or via a user interface<br>
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-udln.gif" />
@@ -309,11 +309,11 @@
 				<b>Name:</b> Shadow depth<br>
 				<b>Description:</b> values for the depth of a shadow<br>
 				<b>Valid numeric range:</b> 1 to 1000<br>
-				<b>Scale interpretation:</b> Values can be interpreted as per-mille-of-em<br>
-				<b>Recommended ‘normal’ value:</b> Sample value for Sans 60 point shadow would be 30<br>
-				<b>Suggested programmatic interactions:</b> Applications allow the user to select the drop shadow treatment for text, raising need for a value for every instance in a design space that affects a shadow<br>
-				<b>Suggested user interactions:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface<br>
-				<b>Related axis information:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface<br>
+				<b>Scale interpretation:</b> values can be interpreted as per-mille-of-em<br>
+				<b>Recommended “normal” value:</b> sample value for sans 60-point shadow would be 30<br>
+				<b>Suggested programmatic interactions:</b> applications allow the user to select the drop-shadow treatment for text, raising the need for a value for every instance in a design space that affects a shadow<br>
+				<b>Suggested user interactions:</b> users may choose to program a variant in connection with direct or conjunctive input for a page description language, or via a user interface<br>
+				<b>Related axis information:</b> users may choose to program a variant in connection with direct or conjunctive input for a page description language, or via a user interface<br>
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-shdw.gif" />
@@ -326,12 +326,12 @@
 				<b>Name:</b> Reflect<br>
 				<b>Description:</b> value for a y reflection<br>
 				<b>Valid numeric range:</b> -1 to -1000<br>
-				<b>Scale interpretation:</b> Values can be interpreted as per-mille-of-em
+				<b>Scale interpretation:</b> values can be interpreted as per-mille-of-em
 				<br>
-				<b>Recommended ‘normal’ value:</b> sample value for a reflection would be -350<br>
-				<b>Suggested programmatic interactions:</b> Applications may allow the user to select the reflection of text. <br>
-				<b>Suggested user interactions:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface<br>
-				<b>Related axis information:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface<br>
+				<b>Recommended “normal” value:</b> sample value for a reflection would be -350<br>
+				<b>Suggested programmatic interactions:</b> applications may allow the user to select the reflection of text <br>
+				<b>Suggested user interactions:</b> users may choose to program a variant in connection with direct or conjunctive input for a page description language, or via a user interface<br>
+				<b>Related axis information:</b> users may choose to program a variant in connection with direct or conjunctive input for a page description language, or via a user interface<br>
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-refl.gif" />
@@ -344,11 +344,11 @@
 				<b>Name:</b> Outline value<br>
 				<b>Description:</b> values for the weight of an outlined font<br>
 				<b>Valid numeric range:</b> 1 to 1000<br>
-				<b>Scale interpretation:</b> Values can be interpreted as per-mille-of-em<br>
-				<b>Recommended ‘normal’ value:</b> default is 0<br>
-				<b>Suggested programmatic interactions:</b> Applications may allow the user to select the embossing of text and a depth if the axis exists.<br>
-				<b>Suggested user interactions:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface<br>
-				<b>Related axis information:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface<br>
+				<b>Scale interpretation:</b> values can be interpreted as per-mille-of-em<br>
+				<b>Recommended “normal” value:</b> default is 0<br>
+				<b>Suggested programmatic interactions:</b> applications may allow the user to select the embossing of text and a depth if the axis exists<br>
+				<b>Suggested user interactions:</b> users may choose to program a variant in connection with direct or conjunctive input for a page description language, or via a user interface<br>
+				<b>Related axis information:</b> users may choose to program a variant in connection with direct or conjunctive input for a page description language, or via a user interface<br>
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-otln.gif" />
@@ -361,11 +361,11 @@
 				<b>Name:</b> Engraving value<br>
 				<b>Description:</b> values for the width of the engrave<br>
 				<b>Valid numeric range:</b> 1 to 1000<br>
-				<b>Scale interpretation:</b> Values can be interpreted as per-mille-of-em<br>
-				<b>Recommended ‘normal’ value:</b> Sample value for a Sans regular Latin engraving would be 33<br>
-				<b>Suggested programmatic interactions:</b> Applications may allow the user to select the embossing of text, and a depth if the axis exists<br>
-				<b>Suggested user interactions:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or be given the option via a user interface<br>
-				<b>Related axis information:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or be given the option via a user interface<br>
+				<b>Scale interpretation:</b> values can be interpreted as per-mille-of-em<br>
+				<b>Recommended “normal” value:</b> sample value for a sans regular Latin engraving would be 33<br>
+				<b>Suggested programmatic interactions:</b> applications may allow the user to select the embossing of text, and a depth if the axis exists<br>
+				<b>Suggested user interactions:</b> users may choose to program a variant in connection with direct or conjunctive input for a page description language, or be given the option via a user interface<br>
+				<b>Related axis information:</b> users may choose to program a variant in connection with direct or conjunctive input for a page description language, or be given the option via a user interface<br>
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-engr.gif" />
@@ -378,11 +378,11 @@
 				<b>Name:</b> emboss depth<br>
 				<b>Description:</b> values for embossment depth<br>
 				<b>Valid numeric range:</b> 1 to 1000<br>
-				<b>Scale interpretation:</b> Values can be interpreted as per-mille-of-em<br>
-				<b>Recommended ‘normal’ value:</b> Sample value for Sans 60 point emboss would be 24<br>
-				<b>Suggested programmatic interactions:</b> Applications may allow the user to select the embossing of text, and a depth if the axis exists. <br>
-				<b>Suggested user interactions:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or be given the option via a user interface<br>
-				<b>Related axis information:</b> Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or be given the option via a user interface<br>
+				<b>Scale interpretation:</b> values can be interpreted as per-mille-of-em<br>
+				<b>Recommended “normal” value:</b> sample value for a sans 60-point emboss would be 24<br>
+				<b>Suggested programmatic interactions:</b> applications may allow the user to select the embossing of text, and a depth if the axis exists <br>
+				<b>Suggested user interactions:</b> users may choose to program a variant in connection with direct or conjunctive input for a page description language, or be given the option via a user interface<br>
+				<b>Related axis information:</b> users may choose to program a variant in connection with direct or conjunctive input for a page description language, or be given the option via a user interface<br>
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-embo.gif" />
@@ -395,11 +395,11 @@
 				<b>Name:</b> y transparent Chinese<br>
 				<b>Description:</b> values represent the height of Chinese glyphs<br>
 				<b>Valid numeric range:</b> 1 to 2400<br>
-				<b>Scale interpretation:</b> Values can be interpreted as per-mille-of-em changes, between any instances in the axis<br>
-				<b>Recommended ‘normal’ value:</b> Sample value 950<br>
-				<b>Suggested programmatic interactions:</b> Applications may choose to select a variant in connection to an input for more or less ytch, or it might be programmatically used<br>
-				<b>Suggested user interactions:</b> User may chose a variant to modify the width of the type<br>
-				<b>Related axis information:</b> User may chose a variant to modify the width of the type<br>
+				<b>Scale interpretation:</b> values can be interpreted as per-mille-of-em changes, between any instances in the axis<br>
+				<b>Recommended “normal” value:</b> Sample value 950<br>
+				<b>Suggested programmatic interactions:</b> applications may choose to select a variant in connection with an input for more or less <code>ytch</code>, or it may be programmatically used<br>
+				<b>Suggested user interactions:</b> user may choose a variant to modify the width of the type<br>
+				<b>Related axis information:</b> user may choose a variant to modify the width of the type<br>
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-ytch.gif" />
@@ -412,11 +412,11 @@
 				<b>Name:</b> x transparent Chinese<br>
 				<b>Description:</b> values represent the width of Chinese glyphs<br>
 				<b>Valid numeric range:</b> 1 to 8000<br>
-				<b>Scale interpretation:</b> Values can be interpreted as per-mille-of-em changes, between any instances in the axis<br>
-				<b>Recommended ‘normal’ value:</b> Sample value 950<br>
-				<b>Suggested programmatic interactions:</b> Applications may choose to select a variant in connection to an input for more or less xtch, or it might be programmatically used<br>
-				<b>Suggested user interactions:</b> User may chose a variant to modify the height of the type<br>
-				<b>Related axis information:</b> User may chose a variant to modify the height of the type<br>
+				<b>Scale interpretation:</b> values can be interpreted as per-mille-of-em changes, between any instances in the axis<br>
+				<b>Recommended “normal” value:</b> sample value 950<br>
+				<b>Suggested programmatic interactions:</b> applications may choose to select a variant in connection with an input for more or less <code>xtch</code>, or it may be programmatically used<br>
+				<b>Suggested user interactions:</b> user may choose a variant to modify the height of the type<br>
+				<b>Related axis information:</b> user may choose a variant to modify the height of the type<br>
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-xtch.gif" />
@@ -429,11 +429,11 @@
 				<b>Name:</b> relative x advance<br>
 				<b>Description:</b> assigns a distance value per mille to the motion of a glyph<br>
 				<b>Valid numeric range:</b> -1000 to 1000<br>
-				<b>Scale interpretation:</b> Values can be interpreted as per-mille-of-em<br>
-				<b>Recommended ‘normal’ value:</b> none<br>
-				<b>Suggested programmatic interactions:</b> Applications may enable plotting the number of loops of an animation required for the time and distance defined by the user.<br>
-				<b>Suggested user interactions:</b> Users may choose different speeds and distances traveled by an animation<br>
-				<b>Related axis information:</b> Users may choose different speeds and distances traveled by an animation<br>
+				<b>Scale interpretation:</b> values can be interpreted as per-mille-of-em<br>
+				<b>Recommended “normal” value:</b> none<br>
+				<b>Suggested programmatic interactions:</b> applications may enable plotting the number of loops of an animation required for the time and distance defined by the user<br>
+				<b>Suggested user interactions:</b> users may choose different speeds and distances traveled by an animation<br>
+				<b>Related axis information:</b> users may choose different speeds and distances traveled by an animation<br>
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-rxad.gif" />
@@ -445,12 +445,12 @@
 				<b>Tag:</b> ryad<br>
 				<b>Name:</b> relative y advance<br>
 				<b>Description:</b> assigns a distance value per mille to the motion of a glyph<br>
-				<b>Valid numeric range:</b>  -1000 to 1000<br>
-				<b>Scale interpretation:</b> Values can be interpreted as per-mille-of-em<br>
-				<b>Recommended ‘normal’ value:</b> none<br>
-				<b>Suggested programmatic interactions:</b> Applications may enable plotting the number of loops of an animation required for the time and distance defined by the user<br>
-				<b>Suggested user interactions:</b> Users may choose different speeds and distances traveled by an animation<br>
-				<b>Related axis information:</b> Users may choose different speeds and distances traveled by an animation<br>
+				<b>Valid numeric range:</b> -1000 to 1000<br>
+				<b>Scale interpretation:</b> values can be interpreted as per-mille-of-em<br>
+				<b>Recommended “normal” value:</b> none<br>
+				<b>Suggested programmatic interactions:</b> applications may enable plotting the number of loops of an animation required for the time and distance defined by the user<br>
+				<b>Suggested user interactions:</b> users may choose different speeds and distances traveled by an animation<br>
+				<b>Related axis information:</b> users may choose different speeds and distances traveled by an animation<br>
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-ryad.gif" />
@@ -461,13 +461,13 @@
 				<p>
 				<b>Tag:</b> rsec<br>
 				<b>Name:</b> relative second<br>
-				<b>Description:</b> axis contains a relative second value for one, or each glyph on that axis<br>
+				<b>Description:</b> axis contains a relative second value for one, or each, glyph on that axis<br>
 				<b>Valid numeric range:</b> 001- 60.00<br>
-				<b>Scale interpretation:</b> Value can be interpreted as a recommendation for one second of animation time<br>
-				<b>Recommended ‘normal’ value:</b> 1<br>
-				<b>Suggested programmatic interactions:</b> Applications may plot the relative time of a glyph, or a glyph to other glyphs, and play them in relative or absolute time<br>
-				<b>Suggested user interactions:</b> Users may choose realistic, or other speeds for an animation<br>
-				<b>Related axis information:</b> Users may choose realistic, or other speeds for an animation<br>
+				<b>Scale interpretation:</b> value can be interpreted as a recommendation for one second of animation time<br>
+				<b>Recommended “normal” value:</b> 1<br>
+				<b>Suggested programmatic interactions:</b> applications may plot the relative time of a glyph, or a glyph to other glyphs, and play them in relative or absolute time<br>
+				<b>Suggested user interactions:</b> users may choose realistic or other speeds for an animation<br>
+				<b>Related axis information:</b> users may choose realistic or other speeds for an animation<br>
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-rsec.gif" />
@@ -477,14 +477,14 @@
 				<h3 id="vuid">22. vuid</h3>
 				<p>
 				<b>Tag:</b> vuid<br>
-				<b>Name:</b> Unicode variation axis<br>
-				<b>Description:</b> instances represent changes to the glyph’s Unicode Id<br>
-				<b>Valid numeric range:</b> Any Unicode value can be used<br>
-				<b>Scale interpretation:</b> Values can be interpreted as glyph locations<br>
-				<b>Recommended ‘normal’ value:</b> Any common Unicode value<br>
-				<b>Suggested programmatic interactions:</b> Applications may choose to present a variation in connection to an input Unicode id<br>
-				<b>Suggested user interactions:</b> Users may choose to input a character to a page description language, and the unicode presented is a variant in connection to other input<br>
-				<b>Related axis information:</b> Users may choose to input a character to a page description language, and the unicode presented is a variant in connection to other input<br>
+				<b>Name:</b> unicode variation axis<br>
+				<b>Description:</b> instances represent changes to the glyph’s Unicode ID<br>
+				<b>Valid numeric range:</b> any Unicode value can be used<br>
+				<b>Scale interpretation:</b> values can be interpreted as glyph locations<br>
+				<b>Recommended “normal” value:</b> any common Unicode value<br>
+				<b>Suggested programmatic interactions:</b> applications may choose to present a variation in connection with an input Unicode ID<br>
+				<b>Suggested user interactions:</b> users may choose to input a character to a page description language, and the unicode presented is a variant in connection with other input<br>
+				<b>Related axis information:</b> users may choose to input a character to a page description language, and the unicode presented is a variant in connection with other input<br>
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-vuid.gif" />
@@ -496,12 +496,12 @@
 				<b>Tag:</b> votf<br>
 				<b>Name:</b> feature variation axis<br>
 				<b>Description:</b> instances represent changes to a glyph’s feature<br>
-				<b>Valid numeric range:</b> Any feature tag can be used.<br>
-				<b>Scale interpretation:</b> Values can be interpreted as feature locations<br>
-				<b>Recommended ‘normal’ value:</b> Any common feature<br>
-				<b>Suggested programmatic interactions:</b> Applications may choose to select a variation in connection to an input feature tag id.<br>
-				<b>Suggested user interactions:</b> Users may choose to program a feature in connection to input for a page description language.<br>
-				<b>Related axis information:</b> Users may choose to program a feature in connection to input for a page description language.<br>
+				<b>Valid numeric range:</b> any feature tag can be used<br>
+				<b>Scale interpretation:</b> values can be interpreted as feature locations<br>
+				<b>Recommended “normal” value:</b> any common feature<br>
+				<b>Suggested programmatic interactions:</b> applications may choose to select a variation in connection with an input feature tag ID<br>
+				<b>Suggested user interactions:</b> users may choose to program a feature in connection with input for a page description language<br>
+				<b>Related axis information:</b> users may choose to program a feature in connection with input for a page description language<br>
 				</p>
 				<h4>Demo</h4>
 				<img src="images/animation-votf.gif" />
