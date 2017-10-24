@@ -1,5 +1,9 @@
 # Font Bureau OpenType 1.8 Variations Axes Proposals
 
+[Source Spreadsheet](https://docs.google.com/spreadsheets/d/1lZcLW7xo39zG3TTv6EK3iLs5t8OjWWPJv0lb9qEnsDE)
+
+## Introduction
+
 Our goal is to reveal how our useful variations fonts are built from axes that enable optical sizes, variation through time and motion, and multi-script integration (Latin/CJK/Arabic/Hebrew.)
 
 This guide will be presented to the OpenType Variations working group and publicly during Summer 2017.
