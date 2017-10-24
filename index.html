@@ -155,6 +155,7 @@
 						recommended_value: d['Recommended ‘normal’ value'],
 						suggested_programmatic: d['Suggested programmatic interactions'],
 						suggested_user: d['Suggested user interactions'],
+						blend_participant: d['Blend participant'],
 						demo: d.Demo,
 					};
 				});
@@ -171,6 +172,7 @@
 					html+="<b>Recommended “normal” value:</b> "+value.recommended_value+"<br>\n";
 					html+="<b>Suggested programmatic interactions:</b> "+value.suggested_programmatic+"<br>\n";
 					html+="<b>Suggested user interactions:</b> "+value.suggested_user+"<br>\n";
+					html+="<b>Related axis information:</b> "+value.blend_participant+"<br>\n";
 					html+="</p>\n";
 					html+="<h4>Demo</h4>\n";
 					html+="<img src='images/animation-"+value.tag+".gif' />\n";
