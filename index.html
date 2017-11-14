@@ -2,16 +2,17 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	
-	<link rel="stylesheet" href="https://www.typenetwork.com/assets_content/css/adobe-blank.css" />
-	<link rel="stylesheet" href="https://www.typenetwork.com/assets_content/css/fonts-momentum-sans.css" />
-	<link rel="stylesheet" href="https://www.typenetwork.com/assets_content/css/icon_font.css" />
-	<link rel="stylesheet" href="https://www.typenetwork.com/assets_content/css/reset.css" />
-	<link rel="stylesheet" href="https://www.typenetwork.com/assets_content/css/style.css" />
-	<link rel="stylesheet" href="https://www.typenetwork.com/assets_content/css/lightbox.css" />
-	<link rel="stylesheet" href="https://www.typenetwork.com/assets_content/css/awesomplete.css" />	
-
 	<title>Font Bureau OpenType 1.8 Variations Axes Proposals</title>
+
+	<meta name="viewport" content="initial-scale=1">
+	
+	<link rel="stylesheet" href="https://www.typenetwork.com/assets_content/css/adobe-blank.css">
+	<link rel="stylesheet" href="https://www.typenetwork.com/assets_content/css/fonts-momentum-sans.css">
+	<link rel="stylesheet" href="https://www.typenetwork.com/assets_content/css/icon_font.css">
+	<link rel="stylesheet" href="https://www.typenetwork.com/assets_content/css/reset.css">
+	<link rel="stylesheet" href="https://www.typenetwork.com/assets_content/css/style.css">
+	<link rel="stylesheet" href="https://www.typenetwork.com/assets_content/css/lightbox.css">
+	<link rel="stylesheet" href="https://www.typenetwork.com/assets_content/css/awesomplete.css">	
 
 	<style>
 		body, h1, h2, h3, h4, h5, h6, p {
@@ -26,18 +27,13 @@
 	<header class="header-global">
 	</header>
 	
-	<nav class="nav-global">
-		<ul></ul>
-	</nav>
-	<nav class="nav-user">
-		<ul></ul>
-	</nav>
-	
 	<aside class="content-filters">
 		<a class="content-filters-close" href="#">Close</a>
 		
-		<h3><a href="#xtra">A. Primary Type Axes</a></h3>
-		<ul>
+		<h2>Axes Proposal</h2>
+		
+		<h3 class="content-filters-group-collapsed"><a href="#xtra">A. Primary Type Axes</a></h3>
+		<ul class="content-filters-collapsed">
 			<li><a href="#xtra">1. xtra</a></li>
 			<li><a href="#xopq">2. xopq</a></li>
 			<li><a href="#ytra">3. ytra</a></li>
@@ -49,8 +45,8 @@
 			<li><a href="#xtab">9. xtab</a></li>
 			<li><a href="#vrot">10. vrot</a></li>
 		</ul>
-		<h3><a href="#udln">B. Treatment Axes</a></h3>
-		<ul>
+		<h3 class="content-filters-group-collapsed"><a href="#udln">B. Treatment Axes</a></h3>
+		<ul class="content-filters-collapsed">
 			<li><a href="#udln">11. udln</a></li>
 			<li><a href="#shdw">12. shdw</a></li>
 			<li><a href="#refl">13. refl</a></li>
@@ -58,19 +54,19 @@
 			<li><a href="#engr">15. engr</a></li>
 			<li><a href="#embo">16. embo</a></li>
 		</ul>
-		<h3><a href="#ytch">C. Non-Latin Axes</a></h3>
-		<ul>
+		<h3 class="content-filters-group-collapsed"><a href="#ytch">C. Non-Latin Axes</a></h3>
+		<ul class="content-filters-collapsed">
 			<li><a href="#ytch">17. ytch</a></li>
 			<li><a href="#xtch">18. xtch</a></li>
 		</ul>
-		<h3><a href="#rxad">D. Motion Axes</a></h3>
-		<ul>
+		<h3 class="content-filters-group-collapsed"><a href="#rxad">D. Motion Axes</a></h3>
+		<ul class="content-filters-collapsed">
 			<li><a href="#rxad">19. rxad</a></li>
 			<li><a href="#ryad">20. ryad</a></li>
 			<li><a href="#rsec">21. rsec</a></li>
 		</ul>
-		<h3><a href="#vuid">E. Glyph Axes</a></h3>
-		<ul>
+		<h3 class="content-filters-group-collapsed"><a href="#vuid">E. Glyph Axes</a></h3>
+		<ul class="content-filters-collapsed">
 			<li><a href="#vuid">22. vuid</a></li>
 			<li><a href="#votf">23. votf</a></li>
 		</ul>
@@ -122,7 +118,7 @@
 		</article>
 		
 		<footer class="footer-global">
-			<p>&copy; Copyright Font Bureau 2017. All Rights Reserved.</p>
+			<p>&copy; Font Bureau 2017. All Rights Reserved.</p>
 		</footer>
 		
 	</div>
@@ -142,6 +138,7 @@
 	<script src="//d3js.org/d3.v3.min.js"></script>
 	<script type="text/javascript"charset="utf-8">
 		$(document).ready(function() {
+			"use strict";
 			d3.text("https://docs.google.com/spreadsheets/d/e/2PACX-1vRl0zD7-mCywXYoFXbW55hdGqNY0XxPFUZAfuD6OJDfYPM5eBaQWc3wpQi1RdBQmoCgoWT3OX7iZXXu/pub?gid=0&single=true&output=csv", function(string) {
 				var data = d3.csv.parse(string, function(d) {
 					return {
@@ -161,7 +158,7 @@
 				});
 				var section = $("section");
 				$.each(data, function(index, value) {
-					var html = ""
+					var html = "";
 					html+="<h3 id='"+value.tag+"'>"+value.index+". "+value.tag+"</h3>\n";
 					html+="<p>\n";
 					html+="<b>Tag:</b> "+value.tag+"<br>\n";
@@ -177,7 +174,7 @@
 					*/
 					html+="</p>\n";
 					html+="<h4>Demo</h4>\n";
-					html+="<img src='images/animation-"+value.tag+".gif' />\n";
+					html+="<img src='images/animation-"+value.tag+".gif'>\n";
 					html+="<hr>\n";
 					section.append(html);
 				});
