@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title><?php if (!empty($title)) echo "$title — "; ?>Font Bureau OpenType 1.8 Variations Axes Proposals</title>
+	<title>{% if post.title %}{{ post.title }} — {% endif %}Font Bureau OpenType 1.8 Variations Axes Proposals</title>
 
 	<meta name="viewport" content="initial-scale=1">
 	
