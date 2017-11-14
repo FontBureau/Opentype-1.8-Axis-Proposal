@@ -18,6 +18,12 @@
 		body, h1, h2, h3, h4, h5, h6, p {
 			font-family: Verdana, sans-serif !important;
 		}
+		
+		h2 a, h3 a {
+			text-decoration: inherit !important;
+			color: inherit !important;
+		}
+		
 	</style>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -32,6 +38,11 @@
 
 	<script src='https://www.typenetwork.com/assets_content/js/libs/jquery-1.11.0.min.js'></script>
 	<script src="https://www.typenetwork.com/assets_content/js/functions.js"></script>
+	<script>
+		$(function() {
+			$('a.content-options-show-filters').text("Navigation");
+		});
+	</script>
 </head>
 <body>
 	
@@ -41,52 +52,58 @@
 	</header>
 	
 	<aside class="content-filters">
-		<a class="content-filters-close" href="#">Close</a>
+		<a class="content-filters-close" href="/proposal/#">Close</a>
 		
-		<h2>Axes Proposal</h2>
+		<h2><a href="/">Intro</a></h2>
 		
-		<h3 class="content-filters-group-collapsed"><a href="#xtra">A. Primary Type Axes</a></h3>
+		<h2><a href='/proposal/'>Axes Proposal</a></h2>
+		
+		<h3 class="content-filters-group-collapsed"><a href="/proposal/#xtra">A. Primary Type Axes</a></h3>
 		<ul class="content-filters-collapsed">
-			<li><a href="#xtra">1. xtra</a></li>
-			<li><a href="#xopq">2. xopq</a></li>
-			<li><a href="#ytra">3. ytra</a></li>
-			<li><a href="#yopq">4. yopq</a></li>
-			<li><a href="#ytlc">5. ytlc</a></li>
-			<li><a href="#ytuc">6. ytuc</a></li>
-			<li><a href="#ytde">7. ytde</a></li>
-			<li><a href="#ytas">8. ytas</a></li>
-			<li><a href="#xtab">9. xtab</a></li>
-			<li><a href="#vrot">10. vrot</a></li>
+			<li><a href="/proposal/#xtra">1. xtra</a></li>
+			<li><a href="/proposal/#xopq">2. xopq</a></li>
+			<li><a href="/proposal/#ytra">3. ytra</a></li>
+			<li><a href="/proposal/#yopq">4. yopq</a></li>
+			<li><a href="/proposal/#ytlc">5. ytlc</a></li>
+			<li><a href="/proposal/#ytuc">6. ytuc</a></li>
+			<li><a href="/proposal/#ytde">7. ytde</a></li>
+			<li><a href="/proposal/#ytas">8. ytas</a></li>
+			<li><a href="/proposal/#xtab">9. xtab</a></li>
+			<li><a href="/proposal/#vrot">10. vrot</a></li>
 		</ul>
-		<h3 class="content-filters-group-collapsed"><a href="#udln">B. Treatment Axes</a></h3>
+		<h3 class="content-filters-group-collapsed"><a href="/proposal/#udln">B. Treatment Axes</a></h3>
 		<ul class="content-filters-collapsed">
-			<li><a href="#udln">11. udln</a></li>
-			<li><a href="#shdw">12. shdw</a></li>
-			<li><a href="#refl">13. refl</a></li>
-			<li><a href="#otln">14. otln</a></li>
-			<li><a href="#engr">15. engr</a></li>
-			<li><a href="#embo">16. embo</a></li>
+			<li><a href="/proposal/#udln">11. udln</a></li>
+			<li><a href="/proposal/#shdw">12. shdw</a></li>
+			<li><a href="/proposal/#refl">13. refl</a></li>
+			<li><a href="/proposal/#otln">14. otln</a></li>
+			<li><a href="/proposal/#engr">15. engr</a></li>
+			<li><a href="/proposal/#embo">16. embo</a></li>
 		</ul>
-		<h3 class="content-filters-group-collapsed"><a href="#ytch">C. Non-Latin Axes</a></h3>
+		<h3 class="content-filters-group-collapsed"><a href="/proposal/#ytch">C. Non-Latin Axes</a></h3>
 		<ul class="content-filters-collapsed">
-			<li><a href="#ytch">17. ytch</a></li>
-			<li><a href="#xtch">18. xtch</a></li>
+			<li><a href="/proposal/#ytch">17. ytch</a></li>
+			<li><a href="/proposal/#xtch">18. xtch</a></li>
 		</ul>
-		<h3 class="content-filters-group-collapsed"><a href="#rxad">D. Motion Axes</a></h3>
+		<h3 class="content-filters-group-collapsed"><a href="/proposal/#rxad">D. Motion Axes</a></h3>
 		<ul class="content-filters-collapsed">
-			<li><a href="#rxad">19. rxad</a></li>
-			<li><a href="#ryad">20. ryad</a></li>
-			<li><a href="#rsec">21. rsec</a></li>
+			<li><a href="/proposal/#rxad">19. rxad</a></li>
+			<li><a href="/proposal/#ryad">20. ryad</a></li>
+			<li><a href="/proposal/#rsec">21. rsec</a></li>
 		</ul>
-		<h3 class="content-filters-group-collapsed"><a href="#vuid">E. Glyph Axes</a></h3>
+		<h3 class="content-filters-group-collapsed"><a href="/proposal/#vuid">E. Glyph Axes</a></h3>
 		<ul class="content-filters-collapsed">
-			<li><a href="#vuid">22. vuid</a></li>
-			<li><a href="#votf">23. votf</a></li>
+			<li><a href="/proposal/#vuid">22. vuid</a></li>
+			<li><a href="/proposal/#votf">23. votf</a></li>
 		</ul>
 		
 	</aside>
 
 	<div class="content-main">
 		
-		<a class="content-options-show-filters" href="#">Filters</a>
+		<a class="content-options-show-filters" href="/proposal/#">Filters</a>
 		
+		<article class="article-utility">
+			
+			<section class="section-article">
+
