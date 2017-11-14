@@ -32,7 +32,7 @@ As a set, a [network effect](https://en.wikipedia.org/wiki/Network_effect) is at
 The functionality for typographers increases exponentially as each attribute can be combined with the others, creating myriad possibilities. 
 Registration in the OpenType specification will mean that this system becomes interoperable. 
 
-### B. Treatment Axes (7)
+### B. Treatment Axes (6)
 
 Typographers apply decoration effects to type to create different forms of (highly stylized) emphasis. 
 In the early days of digital type, many families did not have ‘true’ italics or bold weights, and application developers wrote auto-bold and auto-slant features, along with drop shadows, underlines, and so on. 
