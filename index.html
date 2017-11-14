@@ -1,4 +1,7 @@
-<?php include('head.php'); ?>
+---
+layout: page
+title: Variations Axes Proposal Introduction
+---
 
 <h2>Variations Proposal Introduction</h2>
 
@@ -29,5 +32,3 @@
 <h3>E. Glyph Axes</h3>
 <p>The existing OpenType specification allows composites—i.e., reference from a glyph to use another glyph, possibly repositioned or otherwise transformed—to save space and time when developing fonts that repeatedly use the same shape. </p>
 <p>In traditional typefounding, a font developer would not hesitate to create fractions by using a glyph from a smaller master of the same style. In variable fonts, using the same contours of a glyph repeatedly (with deltas for weight, width, and optical size) opens up the possibility of using those and other instances for many such purposes, but only if the developer can pinpoint the instance location ​​of particular glyphs, or glyphs of a particular feature, along a registered axis.</p>
-
-<?php include('foot.php'); ?>
