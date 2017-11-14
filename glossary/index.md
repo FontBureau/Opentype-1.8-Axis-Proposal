@@ -3,7 +3,7 @@ layout: page
 title: Glossary
 ---
 
-{{ page.title }}
+## {{ page.title }}
 
 <dl>
 
