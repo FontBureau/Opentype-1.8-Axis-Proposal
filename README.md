@@ -79,3 +79,16 @@ And these could be nested, like TrueType components.
 
 This would provide filesize reductions even within ASCII: 
 A single glyph could express the lowercase o, uppercase O, zero and its OpenType figure feature alternates, and the zeros within the percentage sign. 
+
+* * * 
+
+How This Site Is Made
+=====================
+
+This site is constructed with Jeykll, and hosted on [pages.github.com](https://pages.github.com) so that your Pull Requests, when merged, will quickly become the live site without further action.
+
+To install the command line tools, run
+
+    gem update bundler
+    bundle install
+
