@@ -24,6 +24,16 @@
 			color: inherit !important;
 		}
 		
+		dl dt {
+			text-transform: uppercase;
+			font-weight: bold;
+			margin-top: 2em;
+		}
+		
+		dl dd {
+			margin: 1em 0;
+			max-width: 40em;
+		}
 	</style>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -96,6 +106,10 @@
 			<li><a href="/proposal/#vuid">22. vuid</a></li>
 			<li><a href="/proposal/#votf">23. votf</a></li>
 		</ul>
+
+		<h2><a href='/demos/'>Demonstrations</a></h2>
+
+		<h2><a href='/glossary/'>Glossary</a></h2>
 		
 	</aside>
 
