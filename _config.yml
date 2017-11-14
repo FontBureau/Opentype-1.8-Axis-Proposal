@@ -1,0 +1,4 @@
+markdown: kramdown
+exclude: ["Gemfile"]
+url: https://variationsguide.typenetwork.com
+title: Font Bureau OpenType 1.8 Variations Axes Proposals
