@@ -24,7 +24,7 @@ Controlling opaque or transparent areas in the X or Y dimensions.
 
 The OpenType v1.8.0 specification already offers registered (interoperable) axes for weight, width, and optical size. 
 These axes can be created by composing the axes proposed in this section. 
-This technique of constructing those 'higher level' axes by blending together 'lower level' axes means that typographers can control them with high precision. 
+This technique of constructing those ‘higher level’ axes by blending together ‘lower level’ axes means that typographers can control them with high precision. 
 
 This set of axes form an inter-related and gestalt system. 
 While it is useful for each of attribute to be available as variation axis, there is even greater value in having them form a cohesive system. 
@@ -35,8 +35,8 @@ Registration in the OpenType specification will mean that this system becomes in
 ### B. Treatment Axes (7)
 
 Typographers apply decoration effects to type to create different forms of (highly stylized) emphasis. 
-In the early days of digital type, many families did not have 'true' italics or bold weights, and application developers wrote auto-bold and auto-slant features, along with drop shadows, underlines, and so on. 
-Since the introduction of TrueType, it has become much more common for type to be distributed in families with 'real' Bold, Italic, and Bold Italic styles. 
+In the early days of digital type, many families did not have ‘true’ italics or bold weights, and application developers wrote auto-bold and auto-slant features, along with drop shadows, underlines, and so on. 
+Since the introduction of TrueType, it has become much more common for type to be distributed in families with ‘real’ Bold, Italic, and Bold Italic styles. 
 
 The use of the auto features for bold and italic is now disdained by typographers. 
 The use of a standard underline effect was famously rejected by Medium, and became a global phenomenon that even the New York Times has adopted. 
@@ -63,7 +63,7 @@ Distance = Rate × Time
 
 These axes enable motion graphics designers to solve this equation without trial-and-error on each glyph.
 
-While some may wonder if Variable Fonts "should" be used in this way. 
+While some may wonder if Variable Fonts “should” be used in this way. 
 But the fact is that they already are used this way. 
 The question is not about if this might fly, since they are flying already, but if they will fly in a way that is interoperable. 
 
@@ -71,13 +71,13 @@ With registration, reliable UIs can be made for motion graphics applications.
 
 ### E. Glyph Axes (2)
 
-"Don't Repeat Yourself"
+“Don’t Repeat Yourself”
 
 These axes are not inter-related as groups 1 and 2 are, but have something in common:
 The idea that good engineering means seeking simplicity and elegance by reducing duplication. 
 
 Many Unicode characters can be expressed by a single glyph with variation along some axis. 
-Therefore it would be good to be able to ask for a given Unicode character and get a position within a glyph's variation space where that character can be found. 
+Therefore it would be good to be able to ask for a given Unicode character and get a position within a glyph’s variation space where that character can be found. 
 Similarly, alternate glyphs accessed through OpenType features could also be returned as locations in a variation space instead of duplicate glyph data. 
 And these could be nested, like TrueType components. 
 
