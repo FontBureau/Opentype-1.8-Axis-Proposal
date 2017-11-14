@@ -87,8 +87,8 @@ How This Site Is Made
 
 This site is constructed with Jeykll, and hosted on [pages.github.com](https://pages.github.com) so that your Pull Requests, when merged, will quickly become the live site without further action.
 
-To install the command line tools, run
+To install the command line tools and run a local server for development, run:
 
-    gem update bundler
+    sudo gem install bundler
     bundle install
-
+    jekyll serve
