@@ -24,6 +24,10 @@
 			color: inherit !important;
 		}
 		
+		ul.content-filters-collapsed + h2 {
+			margin-top: 1.75rem;
+		}
+		
 		dl dt {
 			text-transform: uppercase;
 			font-weight: bold;
