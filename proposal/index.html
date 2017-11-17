@@ -1,6 +1,9 @@
-<?php include('../head.php'); ?>
+---
+layout: page
+title: Axes Proposal
+---
 
-<h2>Variation Axes Proposal</h2>
+<h2>Axes Proposal</h2>
 
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script type="text/javascript"charset="utf-8">
@@ -42,7 +45,10 @@
 				html+="</p>\n";
 				html+="<img src='images/animation-"+value.tag+".gif' alt='Demo'>\n";
 				html+="<hr>\n";
-				section.append(html);
+                /* only show axes proposals 1 to 8 on this page */
+                if($.inArray( value.index, [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ] ) !== -1) {
+                    section.append(html);
+                };
 			});
 			
 			if (window.location.hash) {
@@ -51,5 +57,3 @@
 		});
 	});
 </script>
-
-<?php include('../foot.php'); ?>
