@@ -26,7 +26,7 @@ This set of axes form an interrelated and gestalt system. While it is useful for
 
 **Related axes:** ytlc, ytuc, ytde, ytas, xtra, xopq, ytra, yopq
 
-**Similar axes:** hght, wdth, wght
+**Similar axes:** none
 
 **Axis type:** Parametric
 
