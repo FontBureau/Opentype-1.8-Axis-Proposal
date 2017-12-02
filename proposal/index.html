@@ -1,0 +1,59 @@
+---
+layout: page
+title: Axes Proposal
+---
+
+<h2>Axes Proposal</h2>
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript"charset="utf-8">
+	$(document).ready(function() {
+		"use strict";
+		d3.text("https://docs.google.com/spreadsheets/d/e/2PACX-1vRl0zD7-mCywXYoFXbW55hdGqNY0XxPFUZAfuD6OJDfYPM5eBaQWc3wpQi1RdBQmoCgoWT3OX7iZXXu/pub?gid=0&single=true&output=csv", function(string) {
+			var data = d3.csv.parse(string, function(d) {
+				return {
+					index: +d.index,
+					release: d.Release,
+					tag: d.Tag,
+					name: d.Name,
+					description: d.Description,
+					range: d['Valid numeric range'],
+					scale: d['Scale interpretation'],
+					recommended_value: d['Recommended ‘normal’ value'],
+					suggested_programmatic: d['Suggested programmatic interactions'],
+					suggested_user: d['Suggested user interactions'],
+					blend_participant: d['Blend participant'],
+					demo: d.Demo,
+				};
+			});
+			var section = $("section");
+			$.each(data, function(index, value) {
+				var html = "";
+				html+="<h3 id='"+value.tag+"'>"+value.index+". "+value.tag+"</h3>\n";
+				html+="<p>\n";
+				html+="<b>Tag:</b> "+value.tag+"<br>\n";
+				html+="<b>Name:</b> "+value.name+"<br>\n";
+				html+="<b>Description:</b> "+value.description+"<br>\n";
+				html+="<b>Valid numeric range:</b> "+value.range+"<br>\n";
+				html+="<b>Scale interpretation:</b> "+value.scale+"<br>\n";
+				html+="<b>Recommended “normal” value:</b> "+value.recommended_value+"<br>\n";
+				html+="<b>Suggested programmatic interactions:</b> "+value.suggested_programmatic+"<br>\n";
+				html+="<b>Suggested user interactions:</b> "+value.suggested_user+"<br>\n";
+				/* Don't render Related axis information for now
+				html+="<b>Related axis information:</b> "+value.blend_participant+"<br>\n";
+				*/
+				html+="</p>\n";
+				html+="<img src='images/animation-"+value.tag+".gif' alt='Demo'>\n";
+				html+="<hr>\n";
+                /* only show axes proposals 1 to 8 on this page */
+                if($.inArray( value.index, [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ] ) !== -1) {
+                    section.append(html);
+                };
+			});
+			
+			if (window.location.hash) {
+				$(window).scrollTop($(window.location.hash).offset().top);
+			}
+		});
+	});
+</script>
