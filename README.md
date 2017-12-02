@@ -1,4 +1,4 @@
-OpenType 1.8 Variations Primary Axes Proposal
+**OpenType 1.8 Variations Primary Axes Proposal**
 
 [Source Spreadsheet](https://docs.google.com/spreadsheets/d/13QZl_mnEyV4IgJWO_ysGEClQAoX500tdxEsAlJPF_TQ/edit#gid=0)
 
