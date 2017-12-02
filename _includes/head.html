@@ -27,14 +27,38 @@
 		ul.content-filters-collapsed + h2 {
 			margin-top: 1.75rem;
 		}
+
+		#axis-proposals > li {
+			padding: 1em 0;
+			border-bottom: 1px solid #999;
+		}
 		
-		dl dt {
+		#proposals-page dl dt {
+			display: inline;
+			font-weight: bold;
+		}
+
+		#proposals-page dl dt::after {
+			content: ": ";
+		}
+		
+		#proposals-page dl dd {
+			display: inline;
+		}
+
+		#proposals-page dl dd::after {
+			content: " ";
+			display: block;
+			height: 0.25em;
+		}
+		
+		#glossary-page dl dt {
 			text-transform: uppercase;
 			font-weight: bold;
 			margin-top: 2em;
 		}
 		
-		dl dd {
+		#glossary-page dl dd {
 			margin: 1em 0;
 			max-width: 40em;
 		}
@@ -52,9 +76,37 @@
 
 	<script src='https://www.typenetwork.com/assets_content/js/libs/jquery-1.11.0.min.js'></script>
 	<script src="https://www.typenetwork.com/assets_content/js/functions.js"></script>
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+
 	<script>
 		$(function() {
+			"use strict";
 			$('a.content-options-show-filters').text("Navigation");
+
+			d3.text("https://docs.google.com/spreadsheets/d/e/2PACX-1vQDPjyUrfS27_vcTDjEnz8EznsfWOL5kFxCLDvphUV-9RgwU3o_gM71A1en58x6vrqOXs3-vHajGa1u/pub?gid=0&single=true&output=csv", function(string) {
+				var lines = string.split(/[\r\n]+/);
+				if (lines[0].match(/General Technical Information/)) {
+					lines.shift();
+					string = lines.join("\r\n", lines);
+				}
+				var data = d3.csv.parse(string, function(d) {
+					return {
+						type: d['Axis Type'],
+						tag: d.Tag,
+						name: d.Name,
+						description: d.Description,
+						range: d['Valid numeric range'],
+						scale: d['Scale interpretation'],
+						recommended_value: d['Recommended ‘normal’ value'],
+						suggested_programmatic: d['Suggested programmatic interactions'],
+						suggested_user: d['UI recommendations'],
+						related: d['Related Axes'],
+						similar: d['Similar Axes']
+					};
+				});
+
+				$(document).trigger('tn:axesloaded', [data]);
+			});
 		});
 	</script>
 </head>
@@ -72,44 +124,23 @@
 		
 		<h2><a href='/proposal/'>Axes Proposal</a></h2>
 		
-		<h3 class="content-filters-group-collapsed"><a href="/proposal/#xtra">A. Parametric Latin Axes</a></h3>
-		<ul class="content-filters-collapsed">
-			<li><a href="/proposal/#xtra">1. xtra</a></li>
-			<li><a href="/proposal/#xopq">2. xopq</a></li>
-			<li><a href="/proposal/#ytra">3. ytra</a></li>
-			<li><a href="/proposal/#yopq">4. yopq</a></li>
-			<li><a href="/proposal/#ytlc">5. ytlc</a></li>
-			<li><a href="/proposal/#ytuc">6. ytuc</a></li>
-			<li><a href="/proposal/#ytde">7. ytde</a></li>
-			<li><a href="/proposal/#ytas">8. ytas</a></li>
-			<li><a href="/proposal/#xtab">9. xtab</a></li>
-		</ul>
-		<h3 class="content-filters-group-collapsed"><a href="/proposal/#udln">B. Treatment Axes</a></h3>
-		<ul class="content-filters-collapsed">
-			<li><a href="/proposal/#udln">10. udln</a></li>
-			<li><a href="/proposal/#shdw">11. shdw</a></li>
-			<li><a href="/proposal/#refl">12. refl</a></li>
-			<li><a href="/proposal/#otln">13. otln</a></li>
-			<li><a href="/proposal/#engr">14. engr</a></li>
-			<li><a href="/proposal/#embo">15. embo</a></li>
-		</ul>
-		<h3 class="content-filters-group-collapsed"><a href="/proposal/#ytch">C. Parametric Non-Latin Axes</a></h3>
-		<ul class="content-filters-collapsed">
-			<li><a href="/proposal/#ytch">16. ytch</a></li>
-			<li><a href="/proposal/#xtch">17. xtch</a></li>
-		</ul>
-		<h3 class="content-filters-group-collapsed"><a href="/proposal/#rxad">D. Motion Axes</a></h3>
-		<ul class="content-filters-collapsed">
-			<li><a href="/proposal/#rxad">18. rxad</a></li>
-			<li><a href="/proposal/#ryad">19. ryad</a></li>
-			<li><a href="/proposal/#rsec">20. rsec</a></li>
-			<li><a href="/proposal/#vrot">21. vrot</a></li>
-		</ul>
-		<h3 class="content-filters-group-collapsed"><a href="/proposal/#vuid">E. Glyph Axes</a></h3>
-		<ul class="content-filters-collapsed">
-			<li><a href="/proposal/#vuid">22. vuid</a></li>
-			<li><a href="/proposal/#votf">23. votf</a></li>
-		</ul>
+			<h3 class="content-filters-group-collapsed">
+			<a href="/proposal/#parametric">A. Parametric Axes</a></h3>
+			<ul class="content-filters-collapsed parametric-axes">
+			</ul>
+	
+			<h3 class="content-filters-group-collapsed">
+			<a href="/proposal/#composite">B. Composite Axes</a></h3>
+			<ul class="content-filters-collapsed composite-axes">
+			</ul>
+
+			<script>
+				$(document).on('tn:axesloaded', function(evt, data) {
+					$.each(data, function(i, axis) {
+						$('aside .' + axis.type.toLowerCase() + '-axes').append("<li><a href='/proposal/#" + axis.tag + "'>" + axis.tag + "</a></li>");
+					});
+				});
+			</script>
 
 		<h2><a href='/demos/'>Demonstrations</a></h2>
 
