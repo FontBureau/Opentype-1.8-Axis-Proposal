@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Glossary
+pageId: glossary-page
 ---
 
 ## {{ page.title }}
