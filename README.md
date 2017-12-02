@@ -1,6 +1,6 @@
 # Font Bureau OpenType 1.8 Variations Axes Proposals
 
-[Source Spreadsheet](https://docs.google.com/spreadsheets/d/1lZcLW7xo39zG3TTv6EK3iLs5t8OjWWPJv0lb9qEnsDE)
+[Source Spreadsheet](https://docs.google.com/spreadsheets/d/13QZl_mnEyV4IgJWO_ysGEClQAoX500tdxEsAlJPF_TQ/edit#gid=0)
 
 
 Primary Axes Proposal
