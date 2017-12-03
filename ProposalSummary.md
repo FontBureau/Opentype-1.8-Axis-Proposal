@@ -208,6 +208,45 @@ This set of axes form an interrelated and gestalt system. While it is useful for
 
 **Additional information:** See demonstrations in `demonstrations/index.hml`
 
+### Axis: Parametric Width  ('pwth')
+
+**Tag:** pwth
+
+**Name:** Parametric Width
+
+**Description:** Used to vary width of text from narrower to wider; may be constructed by blending other primary axes, or via referenced instances of other
+
+**Valid numeric range:** Values must be in the range 0 to 2000
+
+**Scale interpretation:** Values can be interpreted as per-mille-of-em
+
+**Recommended or required &ldquo;Regular&rdquo; value:** N/A
+
+**UI recommendations:** Primarily through end-user interfaces
+
+**Script or language considerations:** N/A
+
+**Additional information:** This value range starts at 0 because if width is zero, counterforms are all closed in; if the XTRA value is negative, that doesn't matter in the blended axes. See demonstrations in `demonstrations/index.hml`
+
+**Tag:** pwht
+
+**Name:** Parametric Weight
+
+**Description:** Used to vary stroke thicknesses or other design details to give variation from lighter to blacker; may be constructed by blending other primary axes, or via referenced instances of other
+
+
+**Valid numeric range:** Values must be in the range 0 to 2000
+
+**Scale interpretation:** Values can be interpreted as per-mille-of-em
+
+**Recommended or required &ldquo;Regular&rdquo; value:** N/A
+
+**UI recommendations:** Primarily through end-user interfaces
+
+**Script or language considerations:** N/A
+
+**Additional information:** This value range starts at 1 because if it was zero, no ink would be drawn. 
+
 ## Justification
 **Vendor commitments:** Font Bureau, TYPETR, Google Fonts
 
