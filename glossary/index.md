@@ -8,7 +8,7 @@ title: Glossary
 <dl>
 
 <dt id='ascender'>Ascender</dt>
-<dd>The part of a lowercase letter that extends above the typeface’s x-height.</dd>
+<dd>The part of a lowercase letter that extends above the typeface’s x-height. Not to be confused with "TypoAscender". </dd>
 
 <dt id='bracket'>Bracket</dt>
 <dd>In a serif typeface, the connection between a serif and the main stroke. The bracket
@@ -25,7 +25,8 @@ High-contrast typefaces have greater variation in stroke thickness than low-cont
 typefaces.</dd>
 
 <dt id='descender'>Descender</dt>
-<dd>The part of a lowercase letter that extends below the typeface’s baseline.</dd>
+<dd>The part of a lowercase letter that extends below the typeface’s baseline. Not to be confused with "TypoDescender".
+</dd>
 
 <dt id='joint'>Joint</dt>
 <dd>In a character, where one stroke meets another.</dd>
@@ -58,6 +59,9 @@ including larger x-height, wider characters, looser letter spacing, and lower co
 small sizes, versus tighter letter spacing and higher contrasts, along with a smaller xheight,
 and narrower character widths, in many designs at large sizes.</dd>
 
+<dt id='pointsize'>Point size</dt>
+A system of measurement originally divided into 72.289 parts per inch, rounded to 72 since the late 1990's.
+
 <dt id='proportional'>Proportional</dt>
 <dd>Widths varying with the character shape. In a proportional font, different
 characters occupy different amounts of horizontal space.</dd>
@@ -78,10 +82,7 @@ fonts, not blocking any object behind it. This is also often referred to as “w
 “spacing,” or “background.”</dd>
 
 <dt id='weight'>Weight</dt>
-<dd>The proportion of black to white within the characters in a font. The overall effect of
-the typeface: light, medium, bold, heavy, etc. A parameter that can be varied along
-the weight axis of a variable font. Weight may be added by increasing the thickness of
-only the thick strokes, or of all the strokes in a character depending on design class.</dd>
+<dd>The proportion of black to white within the characters in a font. The overall effect of the typeface often described with words ike: light, medium, bold, heavy, etc. A parameter that can be varied along the "wght" axis of a variable font. Weight may be added by increasing the thickness of only the thick strokes, or of all the strokes in a character depending on design class. In most design classes, the weight is reduced slightly along with the width to produced the same weight as the normal width, and the opposite, weight increases slightly along with width.  Weights of a font family should share the same angles in diagonal strokes and curvatures if the optical size and width are the same.</dd>
 
 <dt id='width'>Width</dt>
 <dd>The proportion of horizontal to vertical space taken up by the characters in a font. The
