@@ -94,5 +94,3 @@ that can be varied along the width axis of a variable font.</dd>
 Called "x-height" because in most typefaces, the top of the <b>x</b> is flat and easy to
 measure; rounded letters like <b>o</b> normally have a slight overshoot. The x-height can be
 a factor in a font’s optical size.</dd>
-
-</dl>
