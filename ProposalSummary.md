@@ -38,7 +38,7 @@ This proposal is for a new and more complete set of typographic axes, with a uni
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
-**Recommended or required “Regular” value:** Sample value 400
+**Recommended or required “Regular” value:** N/A
 
 **Suggested programmatic interactions:** Applications may choose to select a variant in connection to an input, or it might be programmatically used
 
@@ -64,7 +64,7 @@ This proposal is for a new and more complete set of typographic axes, with a uni
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
-**Recommended or required “Regular” value:** Sample value 88
+**Recommended or required “Regular” value:** N/A
 
 **Suggested programmatic interactions:** Applications may choose to select a variant in connection to an input or it might be programmatically used
 
@@ -90,7 +90,7 @@ This proposal is for a new and more complete set of typographic axes, with a uni
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
-**Recommended or required “Regular” value:** Sample value 884
+**Recommended or required “Regular” value:** N/A
 
 **Suggested programmatic interactions:** Applications may choose to select a variant in connection to an inpu, or it might be programmatically used
 
@@ -116,7 +116,7 @@ This proposal is for a new and more complete set of typographic axes, with a uni
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
-**Recommended or required “Regular” value:** Sample value 116
+**Recommended or required “Regular” value:** N/A
 
 **Suggested programmatic interactions:** Applications may choose to select a variant in connection to an input or it may be programmatically used.
 
@@ -142,7 +142,7 @@ This proposal is for a new and more complete set of typographic axes, with a uni
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
-**Recommended or required “Regular” value:** Sample value, 500
+**Recommended or required “Regular” value:** N/A
 
 **Suggested programmatic interactions:** Applications may choose to select a variant in connection to an input, or it might be programmatically used.
 
@@ -168,7 +168,7 @@ This proposal is for a new and more complete set of typographic axes, with a uni
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
-**Recommended or required “Regular” value:** Sample value 725
+**Recommended or required “Regular” value:** N/A
 
 **Suggested programmatic interactions:** Applications may choose to select a variant in connection to an input or it might be programmatically used.
 
@@ -194,7 +194,7 @@ This proposal is for a new and more complete set of typographic axes, with a uni
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
-**Recommended or required “Regular” value:** Sample value -250
+**Recommended or required “Regular” value:** N/A
 
 **Suggested programmatic interactions:** Applications may choose to select a variant in connection to input, or i the axis be programmatically used with input like line-spacing
 
@@ -220,7 +220,7 @@ This proposal is for a new and more complete set of typographic axes, with a uni
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
-**Recommended or required “Regular” value:** Sample value 750
+**Recommended or required “Regular” value:** N/A
 
 **Suggested programmatic interactions:** Applications may choose to select a variant in connection to an input, or it might be programmatically used
 
@@ -247,7 +247,7 @@ axes
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
-**Recommended or required “Regular” value:** Sample value 402
+**Recommended or required “Regular” value:** N/A
 
 **Suggested programmatic interactions:** Applications may choose to select a variant in connection to an input, or it might be programmatically used
 
@@ -274,7 +274,7 @@ axes
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
-**Recommended or required “Regular” value:** Sample value 88
+**Recommended or required “Regular” value:** N/A
 
 **Suggested programmatic interactions:** Applications may choose to select a variant in connection to an input, or it might be programmatically used
 

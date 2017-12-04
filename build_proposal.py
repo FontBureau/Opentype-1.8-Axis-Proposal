@@ -66,7 +66,7 @@ with open("ProposalSummary.md", 'w') as proposal:
 
 **Scale interpretation:** {axis[Scale interpretation]}
 
-**Recommended or required “Regular” value:** {axis[Recommended ‘normal’ value]}
+**Recommended or required “Regular” value:** N/A
 
 **Suggested programmatic interactions:** {axis[Suggested programmatic interactions]}
 
