@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="{{ page.pageId }}">
+<html class='axes-proposal-site' id="{{ page.pageId }}">
 <head>
 	<meta charset="UTF-8">
 	<title>{% if page.title %}{{ page.title }} — {% endif %}Type Network OpenType 1.8 Variations Axes Proposals</title>
@@ -20,13 +20,18 @@
 		body, h1, h2, h3, h4, h5, h6, p {
 			font-family: Verdana, sans-serif !important;
 		}
+
+		.axes-proposal-site h1 {
+			font-size: 2em;
+			margin-bottom: 1rem;
+		}
 		
-		h2 a, h3 a {
+		.axes-proposal-site h2 a, .axes-proposal-site h3 a {
 			text-decoration: inherit !important;
 			color: inherit !important;
 		}
 		
-		ul.content-filters-collapsed + h2 {
+		.axes-proposal-site ul.content-filters-collapsed + h2 {
 			margin-top: 1.75rem;
 		}
 
