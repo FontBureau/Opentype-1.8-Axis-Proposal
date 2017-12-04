@@ -34,7 +34,7 @@ This proposal is for a new and more complete set of typographic axes, with a uni
 
 **Description:** assigns a “white” per mille value to each instance of the design space
 
-**Valid numeric range:** Values must be in the range -1000 to 2000
+**Valid numeric range:**  -1000 to 2000
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
@@ -60,7 +60,7 @@ This proposal is for a new and more complete set of typographic axes, with a uni
 
 **Description:** assigns a “black” per mille value to each instance of the design space
 
-**Valid numeric range:** Values must be in the range -1000 to 2000
+**Valid numeric range:**  -1000 to 2000
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
@@ -86,7 +86,7 @@ This proposal is for a new and more complete set of typographic axes, with a uni
 
 **Description:** assigns an overall “white” per mille value to each instance
 
-**Valid numeric range:** Values must be in the range 0 to 2000
+**Valid numeric range:**  0 to 2000
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
@@ -112,7 +112,7 @@ This proposal is for a new and more complete set of typographic axes, with a uni
 
 **Description:** assigns a “black” per mille value to each instance of the design space
 
-**Valid numeric range:** Values must be in the range -1000 to 2000
+**Valid numeric range:**  -1000 to 2000
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
@@ -138,7 +138,7 @@ This proposal is for a new and more complete set of typographic axes, with a uni
 
 **Description:** assigns a “white” per mille value to each instance of the design space
 
-**Valid numeric range:** Values must be in the range 0 to 1000
+**Valid numeric range:**  0 to 1000
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
@@ -164,7 +164,7 @@ This proposal is for a new and more complete set of typographic axes, with a uni
 
 **Description:** a “white” per mille value for each Uppercase Height in the design space
 
-**Valid numeric range:** Values must be in the range -1000 to 1000
+**Valid numeric range:**  -1000 to 1000
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
@@ -190,7 +190,7 @@ This proposal is for a new and more complete set of typographic axes, with a uni
 
 **Description:** assigns a “white” per mille value to each instance of the design space
 
-**Valid numeric range:** Values must be in the range -1000 to 0
+**Valid numeric range:**  -1000 to 0
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
@@ -216,7 +216,7 @@ This proposal is for a new and more complete set of typographic axes, with a uni
 
 **Description:** assigns a “white” per mille value to each instance of the design space
 
-**Valid numeric range:** Values must be in the range 0 to 1000
+**Valid numeric range:**  0 to 1000
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
@@ -243,7 +243,7 @@ This proposal is for a new and more complete set of typographic axes, with a uni
 **Description:** Used to vary width of text from narrower to wider; may be constructed by blending other primary axes, or via referenced instances of other
 axes
 
-**Valid numeric range:** Values must be in the range 0 to 2000
+**Valid numeric range:**  0 to 2000
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
@@ -270,7 +270,7 @@ axes
 **Description:** Used to vary stroke thicknesses or other design details to give variation from lighter to blacker; may be constructed by blending other primary axes, or via referenced instances of other
 axes
 
-**Valid numeric range:** Values must be in the range 1 to 2000
+**Valid numeric range:**  1 to 2000
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
@@ -291,4 +291,4 @@ axes
 ## Justification
 **Vendor commitments:** Google Fonts, Font Bureau, TYPETR
 
-**More info and demonstrations:** https://axes-proposals.typenetwork.com/
+**More info and demonstrations:** https://axes-proposal.typenetwork.com/
