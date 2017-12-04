@@ -7,255 +7,288 @@
 
 **Proposal name:** Parametric Axes
 
-**Date of submission:** 12/4/2017
+**Date of submission:** 12/3/2017
 
 **New or revised proposal:** New
 
 **Previous revision date:** N/A
 
 ## General Technical Information
-**Overview:** Typographers are familiar with many attributes of typefaces that express the Latin writing system. It is useful for them be available as variation axes so that typographers can control them precisely.
+**Overview:** Type users are familiar with the attributes of a typeface family that combine to make up its appearance. Traditionally, these attributes are available as named and instantiated styles in font families. Some of these attributes are already recorded in fonts conforming to the OpenType v1.0 specification, as values in the OS/2 table, and in other tables of the SFNT format in general.
 
-Some attributes are already recorded in fonts conforming to the OpenType v1.0 specification, as values in the OS/2 table (e.g. uppercase cap-height, lowercase x-height, or ascender/descender values.) This group proposes new axes for these values: **ytlc, ytuc, ytde, ytas**
+Today's font families contain instances pertaining to attributes of registered axes of OpenType, like width, weight, and optical size. In addition, some existing font families contain instances pertaining to grades, descender length, multiscript font mixing for different vertical proportions, and font families contain instances made for specific output, or with specific data to suite particular platform requirements.
 
-It also includes axes for other aspects that are inherent to all writing systems and specific to Latin: Controlling opaque or transparent areas in the X or Y dimensions: **xtra, xopq, ytra, yopq**
+This proposal is for a new and more complete set of typographic axes, with a unified value system, concern for non-Latin, responsive typography, compression, and more. The registration of a full set of attributes allows type developers to combine the modern, potentially much larger font family into a single file; it allows software developers and educators to have a clearer picture of how typography is shaped by the basic attributes; and it allows type users to control the attributes more precisely, whether that control is programmatic or manual via a user interface.
 
-The OpenType v1.8.0 specification already offers registered (interoperable) axes for weight, width, and optical size. These axes can be created by composing the axes proposed in this section. This technique of constructing those ‘higher level’ axes by blending together ‘lower level’ axes means that typographers can control them with high precision.
+**Related axes:** See individual axis proposals
 
-This set of axes form an interrelated and gestalt system. While it is useful for each of these attributes to be available as variation axis, there is even greater value in having them form a cohesive system. As a set, a network effect is at play. The functionality for typographers increases exponentially as each attribute can be combined with the others, creating myriad possibilities. Registration in the OpenType specification will mean that this system becomes interoperable.
-
-**Related axes:** ytlc, ytuc, ytde, ytas, xtra, xopq, ytra, yopq
-
-**Similar axes:** none
+**Similar axes:** See individual axis proposals
 
 **Axis type:** Parametric
 
-## Proposed Axis Details
-
-### Axis: x Transparent ('xtra')
+## Proposed Axis: `xtra`
 
 **Tag:** xtra
 
-**Name:** x Transparent
+**Name:** x transparent
 
-**Description:** Assigns a “white” per mille value to each instance of the design space
+**Description:** assigns a “white” per mille value to each instance of the design space
 
-**Valid numeric range:** -1000 to 2000
-
-**Scale interpretation:** Values can be interpreted as per-mille-of-em
-
-**Recommended or required &ldquo;Regular&rdquo; value:** N/A
-
-**Suggested programmatic interactions:** justification of text, Replace Horizontal Scale
-
-**UI recommendations:** Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface
-
-**Script or language considerations:** N/A
-
-**Additional information:** See demonstrations in `demonstrations/index.hml`
-
-### Axis: y Transparent ('ytra')
-
-**Tag:** ytra
-
-**Name:** y Transparent
-
-**Description:** Assigns an overall “white” per mille value to each instance
-
-**Valid numeric range:** 0 to 2000
+**Valid numeric range:** Values must be in the range -1000 to 2000
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
-**Recommended or required &ldquo;Regular&rdquo; value:** N/A
+**Recommended or required “Regular” value:** Sample value 400
 
-**Suggested programmatic interactions:** linespacing
+**Suggested programmatic interactions:** Applications may choose to select a variant in connection to an input, or it might be programmatically used
 
 **UI recommendations:** Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface
 
-**Script or language considerations:** N/A
+**Script or language considerations:** 
 
-**Additional information:** See demonstrations in `demonstrations/index.hml`
+**Additional information:** 
 
-### Axis: x Opaque ('xopq')
+**Conventionality benefits:** justification
+
+**Interoperability benefits:** 
+
+## Proposed Axis: `xopq`
 
 **Tag:** xopq
 
-**Name:** x Opaque
+**Name:** x opaque
 
-**Description:** Assigns a “black” per mille value to each instance of the design space
+**Description:** assigns a “black” per mille value to each instance of the design space
 
-**Valid numeric range:** -1000 to 2000
+**Valid numeric range:** Values must be in the range -1000 to 2000
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
-**Recommended or required &ldquo;Regular&rdquo; value:** N/A
+**Recommended or required “Regular” value:** Sample value 88
 
-**Suggested programmatic interactions:** weight matching
+**Suggested programmatic interactions:** Applications may choose to select a variant in connection to an input or it might be programmatically used
 
 **UI recommendations:** Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface
 
-**Script or language considerations:** N/A
+**Script or language considerations:** 
 
-**Additional information:** See demonstrations in `demonstrations/index.hml`
+**Additional information:** 
 
-### Axis: y Opaque ('yopq')
+**Conventionality benefits:** Weight matching
+
+**Interoperability benefits:** 
+
+## Proposed Axis: `ytra`
+
+**Tag:** ytra
+
+**Name:** y transparent
+
+**Description:** assigns an overall “white” per mille value to each instance
+
+**Valid numeric range:** Values must be in the range 0 to 2000
+
+**Scale interpretation:** Values can be interpreted as per-mille-of-em
+
+**Recommended or required “Regular” value:** Sample value 884
+
+**Suggested programmatic interactions:** Applications may choose to select a variant in connection to an inpu, or it might be programmatically used
+
+**UI recommendations:** Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface
+
+**Script or language considerations:** 
+
+**Additional information:** 
+
+**Conventionality benefits:** linespacing
+
+**Interoperability benefits:** 
+
+## Proposed Axis: `yopq`
 
 **Tag:** yopq
 
-**Name:** y Opaque
+**Name:** y opaque
 
-**Description:** Assigns a “black” per mille value to each instance of the design space
+**Description:** assigns a “black” per mille value to each instance of the design space
 
-**Valid numeric range:** -1000 to 2000
+**Valid numeric range:** Values must be in the range -1000 to 2000
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
-**Recommended or required &ldquo;Regular&rdquo; value:** N/A
+**Recommended or required “Regular” value:** Sample value 116
 
-**Suggested programmatic interactions:** contrasting, screen legibility
+**Suggested programmatic interactions:** Applications may choose to select a variant in connection to an input or it may be programmatically used.
 
 **UI recommendations:** Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface
 
-**Script or language considerations:** N/A
+**Script or language considerations:** 
 
-**Additional information:** See demonstrations in `demonstrations/index.hml`
+**Additional information:** 
 
-### Axis: y Transparent Lowercase ('ytlc')
+**Conventionality benefits:** contrasting
+
+**Interoperability benefits:** 
+
+## Proposed Axis: `ytlc`
 
 **Tag:** ytlc
 
-**Name:** y Transparent Lowercase
+**Name:** y transparent lowercase
 
-**Description:** Assigns a “white” per mille value to lowercase glyphs
+**Description:** assigns a “white” per mille value to each instance of the design space
 
-**Valid numeric range:** 0 to 1000
+**Valid numeric range:** Values must be in the range 0 to 1000
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
-**Recommended or required &ldquo;Regular&rdquo; value:** N/A
+**Recommended or required “Regular” value:** Sample value, 500
 
-**Suggested programmatic interactions:** height matching
+**Suggested programmatic interactions:** Applications may choose to select a variant in connection to an input, or it might be programmatically used.
 
 **UI recommendations:** Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface
 
-**Script or language considerations:** N/A
+**Script or language considerations:** 
 
-**Additional information:** See demonstrations in `demonstrations/index.hml`
+**Additional information:** 
 
-### Axis: y Transparent Uppercase ('ytuc')
+**Conventionality benefits:** height matching
+
+**Interoperability benefits:** 
+
+## Proposed Axis: `ytuc`
 
 **Tag:** ytuc
 
-**Name:** y Transparent Uppercase
+**Name:** y transparent uppercase
 
-**Description:** Assigns a “white” per mille value to uppercase glyphs
+**Description:** a “white” per mille value for each Uppercase Height in the design space
 
-**Valid numeric range:** -1000 to 1000
-
-**Scale interpretation:** Values can be interpreted as per-mille-of-em
-
-**Recommended or required &ldquo;Regular&rdquo; value:** N/A
-
-**Suggested programmatic interactions:** height matching
-
-**UI recommendations:** Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface
-
-**Script or language considerations:** N/A
-
-**Additional information:** See demonstrations in `demonstrations/index.hml`
-
-### Axis: y Transparent Ascenders ('ytas')
-
-**Tag:** ytas
-
-**Name:** y Transparent Ascenders
-
-**Description:** Assigns a “white” per mille value to each instance of the design space
-
-**Valid numeric range:** 0 to 1000
+**Valid numeric range:** Values must be in the range -1000 to 1000
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
-**Recommended or required &ldquo;Regular&rdquo; value:** N/A
+**Recommended or required “Regular” value:** Sample value 725
 
-**Suggested programmatic interactions:** linespacing
+**Suggested programmatic interactions:** Applications may choose to select a variant in connection to an input or it might be programmatically used.
 
 **UI recommendations:** Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface
 
-**Script or language considerations:** N/A
+**Script or language considerations:** 
 
-**Additional information:** See demonstrations in `demonstrations/index.hml`
+**Additional information:** 
 
-### Axis: y Transparent Descenders ('ytde')
+**Conventionality benefits:** height matching
+
+**Interoperability benefits:** 
+
+## Proposed Axis: `ytde`
 
 **Tag:** ytde
 
-**Name:** y Transparent Descenders
+**Name:** y transparent descender
 
-**Description:** Assigns a “white” per mille value to each instance of the design space
+**Description:** assigns a “white” per mille value to each instance of the design space
 
-**Valid numeric range:** -1000 to 0
+**Valid numeric range:** Values must be in the range -1000 to 0
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
-**Recommended or required &ldquo;Regular&rdquo; value:** N/A
+**Recommended or required “Regular” value:** Sample value -250
 
-**Suggested programmatic interactions:** linespacing
+**Suggested programmatic interactions:** Applications may choose to select a variant in connection to input, or i the axis be programmatically used with input like line-spacing
 
 **UI recommendations:** Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface
 
-**Script or language considerations:** N/A
+**Script or language considerations:** 
 
-**Additional information:** See demonstrations in `demonstrations/index.hml`
+**Additional information:** 
 
-### Axis: Parametric Width  ('pwth')
+**Conventionality benefits:** linespacing
+
+**Interoperability benefits:** 
+
+## Proposed Axis: `ytas`
+
+**Tag:** ytas
+
+**Name:** y transparent ascender 
+
+**Description:** assigns a “white” per mille value to each instance of the design space
+
+**Valid numeric range:** Values must be in the range 0 to 1000
+
+**Scale interpretation:** Values can be interpreted as per-mille-of-em
+
+**Recommended or required “Regular” value:** Sample value 750
+
+**Suggested programmatic interactions:** Applications may choose to select a variant in connection to an input, or it might be programmatically used
+
+**UI recommendations:** Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface
+
+**Script or language considerations:** 
+
+**Additional information:** 
+
+**Conventionality benefits:** linespacing
+
+**Interoperability benefits:** 
+
+## Proposed Axis: `pwth`
 
 **Tag:** pwth
 
-**Name:** Parametric Width
+**Name:** Width (Parametric)
 
 **Description:** Used to vary width of text from narrower to wider; may be constructed by blending other primary axes, or via referenced instances of other
+axes
 
 **Valid numeric range:** Values must be in the range 0 to 2000
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
-**Recommended or required &ldquo;Regular&rdquo; value:** N/A
+**Recommended or required “Regular” value:** Sample value 402
+
+**Suggested programmatic interactions:** Applications may choose to select a variant in connection to an input, or it might be programmatically used
 
 **UI recommendations:** Primarily through end-user interfaces
 
-**Script or language considerations:** N/A
+**Script or language considerations:** 
 
-**Additional information:** This value range starts at 0 because if width is zero, counterforms are all closed in; if the XTRA value is negative, that doesn't matter in the blended axes. See demonstrations in `demonstrations/index.hml`
+**Additional information:** This value range starts at 0 because if width is zero, counterforms are all closed in; if the XTRA value is negative, that doesn't matter in the blended axes. 
+
+**Conventionality benefits:** 
+
+**Interoperability benefits:** 
+
+## Proposed Axis: `pwht`
 
 **Tag:** pwht
 
-**Name:** Parametric Weight
+**Name:** Weight (Parametric)
 
 **Description:** Used to vary stroke thicknesses or other design details to give variation from lighter to blacker; may be constructed by blending other primary axes, or via referenced instances of other
+axes
 
-
-**Valid numeric range:** Values must be in the range 0 to 2000
+**Valid numeric range:** Values must be in the range 1 to 2000
 
 **Scale interpretation:** Values can be interpreted as per-mille-of-em
 
-**Recommended or required &ldquo;Regular&rdquo; value:** N/A
+**Recommended or required “Regular” value:** Sample value 88
+
+**Suggested programmatic interactions:** Applications may choose to select a variant in connection to an input, or it might be programmatically used
 
 **UI recommendations:** Primarily through end-user interfaces
 
-**Script or language considerations:** N/A
+**Script or language considerations:** 
 
 **Additional information:** This value range starts at 1 because if it was zero, no ink would be drawn. 
 
+**Conventionality benefits:** 
+
+**Interoperability benefits:** 
+
 ## Justification
-**Vendor commitments:** Font Bureau, TYPETR, Google Fonts
+**Vendor commitments:** Google Fonts, Font Bureau, TYPETR
 
-**Conventionality benefits:** This proposal does not seek to classify the designs of typefaces parametrically, only what the values of the parameters are. Furthermore, it is offered as a beginning, suggesting the need for—but not containing—suggestions for many important attributes of non-Latin fonts.
-
-The registration of the axes here is also intended to be used as part of a system including the registration of what function an axis performs for programs and/or users along the existing path from script selection to the rendered glyph in a document, aka the Mantra. Documentation of that part of the system, including the registration of what function an axis provides, is still in development and will follow soon.
-
-Type users are familiar with the attributes of a typeface family that combine to make up its appearance. Traditionally, these attributes are available as named and instantiated styles in font families. Some of these attributes are already recorded in fonts conforming to the OpenType v1.0 specification, as values in the OS/2 table, and in other tables of the SFNT format in general.
-
-Today's font families contain instances pertaining to attributes of registered axes of OpenType, like width, weight, and optical size. In addition, some existing font families contain instances pertaining to grades, descender length, multi-script font mixing for different vertical proportions, and font families contain instances made for specific output, or with specific data to suite particular platform requirements.
-
-**Interoperability benefits:** TK
+**More info and demonstrations:** https://axes-proposals.typenetwork.com/
