@@ -9,7 +9,7 @@ pageId: glossary-page
 <dl>
 
 <dt id='ascender'>Ascender</dt>
-<dd>TThe part of a lowercase letter that extends above the typeface’s x-height. Not to be confused with "TypoAscender". </dd>
+<dd>The part of a lowercase letter that extends above the typeface’s x-height. Not to be confused with "TypoAscender". </dd>
 
 <dt id='bracket'>Bracket</dt>
 <dd>In a serif typeface, the connection between a serif and the main stroke. The bracket
