@@ -51,14 +51,16 @@ with open("ProposalSummary.md", 'w') as proposal:
 """.format(introduction = introduction))
 
 	for axis in reader:
-# 		for k,v in axis.items():
-# 			print(k, ':', v)
+		for k,v in axis.items():
+			print(k, ':', v)
 		proposal.write("""
 ## Proposed Axis: `{axis[Tag]}`
 
 **Tag:** {axis[Tag]}
 
 **Name:** {axis[Name]}
+
+**Axis type:** {axis[Axis Type]}
 
 **Description:** {axis[Description]}
 
@@ -73,6 +75,10 @@ with open("ProposalSummary.md", 'w') as proposal:
 **UI recommendations:** {axis[UI Recommeddations]}
 
 **Script or language considerations:** {axis[Script or Language considerations]}
+
+**Related axes:** {axis[Related Axes]}
+
+**Similar axes:** {axis[Similar Axes]}
 
 **Additional information:** {axis[Additional information]}
 
