@@ -24,7 +24,7 @@ This proposal is for a new and more complete set of typographic axes, with a uni
 
 **Similar axes:** See individual axis proposals
 
-**Axis type:** Parametric
+**Axis type:** Parametric and composite
 
 ## Proposed Axis: `xtra`
 
