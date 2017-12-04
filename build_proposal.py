@@ -22,7 +22,7 @@ reader = csv.DictReader(csvlines)
 
 with open("README.md", 'r') as readme:
 	introduction = readme.read().strip()
-	introduction = re.sub(r'^Introduction\s*\r?\n\s*', '', introduction)
+	introduction = re.sub(r'^\W*Introduction\W*\r?\n\s*', '', introduction)
 
 with open("ProposalSummary.md", 'w') as proposal:
 	proposal.write("""# Proposal: Parametric Axes
@@ -51,8 +51,8 @@ with open("ProposalSummary.md", 'w') as proposal:
 """.format(introduction = introduction))
 
 	for axis in reader:
-		for k,v in axis.items():
-			print(k, ':', v)
+# 		for k,v in axis.items():
+# 			print(k, ':', v)
 		proposal.write("""
 ## Proposed Axis: `{axis[Tag]}`
 
