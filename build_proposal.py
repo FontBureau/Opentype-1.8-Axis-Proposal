@@ -85,6 +85,6 @@ with open("ProposalSummary.md", 'w') as proposal:
 ## Justification
 **Vendor commitments:** Google Fonts, Font Bureau, TYPETR
 
-**More info and demonstrations:** https://axes-proposals.typenetwork.com/
+**More info and demonstrations:** https://axes-proposal.typenetwork.com/
 """)
 
