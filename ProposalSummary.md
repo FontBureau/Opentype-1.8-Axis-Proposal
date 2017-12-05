@@ -62,7 +62,7 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **Name:** x transparent
 
-**Axis type:** Parametric
+**Axis type:** Optical
 
 **Description:** assigns a “white” per mille value to each instance of the design space
 
@@ -82,7 +82,7 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **Similar axes:** N/A
 
-**Additional information:** XTRA changes the white space in the x or horizontal direction. This useful in adjusting type horizontally without changing any opaque (black) Useful in VR, TV, and justification of text blocks.
+**Additional information:** XTRA changes the white space in the x or horizontal direction. This useful in adjusting type horizontally without changing the opaque (black) Useful in VR, TV, and justification of text blocks.
 
 **Conventionality benefits:** Users, font vendors and software developers will benefit from the consistent naming of these parametric axes in the development of more expansive design spaces, improvement of underlining typography, and programatic typographic enhancements.
 
@@ -94,7 +94,7 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **Name:** x opaque
 
-**Axis type:** Parametric
+**Axis type:** Optical
 
 **Description:** assigns a “black” per mille value to each instance of the design space
 
@@ -146,7 +146,7 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **Similar axes:** N/A
 
-**Additional information:** YTRA changes the white space in the y or vertical direction. By itself this is useful in solving linespacing issues. Combined with other axes it contributes to opsz, potentially HGHT among many options.
+**Additional information:** YTRA changes the white space in the y or vertical direction. Combined with other axes it contributes to opsz, potentially HGHT among many options.
 
 **Conventionality benefits:** Users, font vendors and software developers will benefit from the consistent naming of these parametric axes in the development of more expansive design spaces, improvement of underlining typography, and programatic typographic enhancements.
 
@@ -158,7 +158,7 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **Name:** y opaque
 
-**Axis type:** Parametric
+**Axis type:** Optical
 
 **Description:** assigns a “black” per mille value to each instance of the design space
 
@@ -190,7 +190,7 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **Name:** y transparent lowercase
 
-**Axis type:** Parametric
+**Axis type:** Optical
 
 **Description:** assigns a “white” per mille value to each instance of the design space
 
@@ -210,7 +210,7 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **Similar axes:** N/A
 
-**Additional information:** YTLC changes the y direction or white space in lowercase letters. This axis contributes to opsz by raising the lowecase to increase legibility in small sizes. By allowing this axes to be used independently of opsz, the axis contributes to expanding the design space of a typeface.
+**Additional information:** YTLC changes lowercase letters white space in the y direction. This axis contributes to opsz by raising the lowecase to increase legibility in small sizes. By allowing this axes to be used independently of opsz, the axis contributes to expanding the design space of a typeface.
 
 **Conventionality benefits:** Users, font vendors and software developers will benefit from the consistent naming of these parametric axes in the development of more expansive design spaces, improvement of underlining typography, and programatic typographic enhancements.
 
@@ -222,7 +222,7 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **Name:** y transparent uppercase
 
-**Axis type:** Parametric
+**Axis type:** Optical
 
 **Description:** a “white” per mille value for each Uppercase Height in the design space
 
@@ -254,7 +254,7 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **Name:** y transparent descender
 
-**Axis type:** Parametric
+**Axis type:** Optical
 
 **Description:** assigns a “white” per mille value to each instance of the design space
 
@@ -274,7 +274,7 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **Similar axes:** N/A
 
-**Additional information:** YTDE changes the y or vertical descenders. Contributes to opsz in making small sizes fit better in text settings. By itself it is useful on adjusting letters when leading is reduced, in all sizes. Very useful in responsive design when headlines change from sinlge lines to multiple lines of text.
+**Additional information:** YTDE changes the y or vertical descenders. Contributes to opsz in making small sizes fit better in text settings. Useful in adjusting letters when leading is reduced, in all sizes. Very useful in responsive design when headlines change from sinlge lines to multiple lines of text.
 
 **Conventionality benefits:** Users, font vendors and software developers will benefit from the consistent naming of these parametric axes in the development of more expansive design spaces, improvement of underlining typography, and programatic typographic enhancements.
 
@@ -286,7 +286,7 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **Name:** y transparent ascender 
 
-**Axis type:** Parametric
+**Axis type:** Optical
 
 **Description:** assigns a “white” per mille value to each instance of the design space
 
