@@ -23,16 +23,21 @@ But these could not be altered by users, and this led to widespread misunderstan
 
 The new variable fonts aspects of the OpenType v1.8 specification offers the potential to improve that situation.
 It launched with some registered axes that pertain to these attributes, such as width and weight, and introduced new ones such as optical size.
-This proposal contains axes pertaining to other attributes, such as grade and descender length.
+This proposal contains axes pertaining to other attributes that all users are familiar with, such as descender length, and some that are less common, such as grade.
 
-An important aspect of this proposal is that it is for a set of axes that are inter-related.
-The axis tag names were carefully chosen to convey their systematic nature.
-Their inter-relation led us to design a unified numeric range system for them all, built on typographic tradition where the size of shapes are reasoned about in per-mille-of-em.
+This proposal is for a set of axes that are inter-related, and form a gestalt system.
+We carefully chose their axis tag names to convey their systematic nature.
+We designed their numeric ranges as a unified set, built on typographic tradition where the sizes of shapes are reasoned about in per-mille-of-em.
 
-The system can be used to compose ‘higher level’ axes by blending together ‘lower level’ axes, so that users can control the parameters of high level type attributes with precision.
-While the OpenType v1.8.0 specification already has registered axes for weight and width, we are proposing ‘Parametric Weight’ and ‘Parametric Width’ axes that drop the existing axes' backwards compatibily concerns, and offer the same per-mille-of-em user experience as our other axes. 
+The most important aspect of the system is that it can be used to compose ‘higher level’ axes by blending together ‘lower level’ axes, so that users can control the parameters of high level type attributes with precision.
+While the OpenType v1.8.0 specification already has registered axes for weight and width, we are proposing ‘Parametric Weight’ and ‘Parametric Width’ axes that are free from backwards compatibily concerns, and offer the same per-mille-of-em user experience as our other axes. 
+
 Such composition has implications for filesize;
-we believe that these axes are useful today in released fonts (e.g. Amstelvar) and they can become even more efficient with future changes to the OpenType specification for composing axes (but that is no reason to delay their registration.)
+we believe that these axes are useful today in released fonts (e.g. Amstelvar) and they can become even more efficient with future changes to the OpenType specification for composing axes. 
+But that is no reason to delay their registration.
+While it would be useful to register each axis to make it individually interopable, making the system interoperable is essential to realising its full value.
+A network effect is at play:
+The potential functionality for typographers increases as each attribute can be combined with the others, creating exponential possibilities.
 
 We also want to note that this proposal is limited to Latin, intentionally.
 During the development of this proposal we were concerned with multi-script typography, where Latin and non-Latin scripts are used together on a page.
@@ -42,7 +47,7 @@ However, this proposal does include axes that change attributes inherent to all 
 Controlling overall opaque or transparent area in X or Y dimensions (`xtra`, `ytra`, `xopq`, `yopq`)
 
 We believe these axes allow type users, especially software developers and educators, to have a clearer picture of how typography is shaped by the attributes of typefaces.
-These axes can be useful when controlled both by programs, or by changes input manually via user interfaces. 
+These axes can be useful both when controlled by programs, or by changes input manually via user interfaces. 
 
 By allowing type users to control these attributes in concert, and precisely, they enable a new kind of responsive typography.
 
