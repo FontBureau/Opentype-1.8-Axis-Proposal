@@ -25,7 +25,8 @@ with open("README.md", 'r') as readme:
 	introduction = re.sub(r'^\W*Introduction\W*\r?\n\s*', '', introduction)
 
 with open("ProposalSummary.md", 'w') as proposal:
-	proposal.write("""# Proposal: Parametric Axes
+	proposal.write("""
+# Proposal: Parametric and Optical Axes
 
 ## Administrative Information
 **Proposers name:** Sam Berlow
@@ -34,7 +35,7 @@ with open("ProposalSummary.md", 'w') as proposal:
 
 **Proposal name:** Parametric Axes
 
-**Date of submission:** 12/4/2017
+**Date of submission:** 12/5/2017
 
 **New or revised proposal:** New
 

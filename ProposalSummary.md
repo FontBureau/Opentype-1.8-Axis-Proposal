@@ -1,3 +1,4 @@
+
 # Proposal: Parametric and Optical Axes
 
 ## Administrative Information
@@ -14,9 +15,7 @@
 **Previous revision date:** N/A
 
 ## General Technical Information
-**Overview:**
-
-Type users are familiar with the attributes of a typeface family.
+**Overview:** Type users are familiar with the attributes of a typeface family.
 Traditionally some of the most common attributes are available as named font instances (or styles) within font families, such as weight or width (e.g. Bold or Condensed.)
 Some attributes are also already recorded in the font metadata fields of the OpenType v1.0 specification, such as values in the OS/2 table (e.g. x-height).
 But these could not be altered by users, and this led to widespread misunderstandings about how typography is shaped by the attributes of typefaces.
@@ -55,7 +54,7 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **Similar axes:** See individual axis proposals
 
-**Axis type:** Parametric and Optical
+**Axis type:** Parametric
 
 ## Proposed Axis: `xtra`
 
@@ -77,17 +76,17 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **UI recommendations:** Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface
 
-**Script or language considerations:** 
+**Script or language considerations:** Many languages and scripts 
 
 **Related axes:** wght, width, opsz
 
 **Similar axes:** N/A
 
-**Additional information:** 
+**Additional information:** XTRA changes the white space in the x or horizontal direction. This useful in adjusting type horizontally without changing any opaque (black) Useful in VR, TV, and justification of text blocks.
 
-**Conventionality benefits:** justification
+**Conventionality benefits:** Users, font vendors and software developers will benefit from the consistent naming of these parametric axes in the development of more expansive design spaces, improvement of underlining typography, and programatic typographic enhancements.
 
-**Interoperability benefits:** 
+**Interoperability benefits:** justification, legibility
 
 ## Proposed Axis: `xopq`
 
@@ -109,17 +108,17 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **UI recommendations:** Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface
 
-**Script or language considerations:** 
+**Script or language considerations:** Many languages and scripts 
 
 **Related axes:** wght, width, opsz
 
 **Similar axes:** N/A
 
-**Additional information:** 
+**Additional information:** XOPQ changes the black in the x or horizontal direction. By itself it expands the design space, by providing reverse contrast. Combined with YOPQ it can create more legible type at small sizes in platforms where hinting is not available.
 
-**Conventionality benefits:** Weight matching
+**Conventionality benefits:** Users, font vendors and software developers will benefit from the consistent naming of these parametric axes in the development of more expansive design spaces, improvement of underlining typography, and programatic typographic enhancements.
 
-**Interoperability benefits:** 
+**Interoperability benefits:** Weight matching, design space
 
 ## Proposed Axis: `ytra`
 
@@ -127,7 +126,7 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **Name:** y transparent
 
-**Axis type:** Parametric
+**Axis type:** Optical
 
 **Description:** assigns an overall “white” per mille value to each instance
 
@@ -137,21 +136,21 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **Recommended or required “Regular” value:** N/A
 
-**Suggested programmatic interactions:** Applications may choose to select a variant in connection to an inpu, or it might be programmatically used
+**Suggested programmatic interactions:** Applications may choose to select a variant in connection to an input, or it might be programmatically used
 
 **UI recommendations:** Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface
 
-**Script or language considerations:** 
+**Script or language considerations:** Many languages and scripts 
 
 **Related axes:** yopq 
 
 **Similar axes:** N/A
 
-**Additional information:** 
+**Additional information:** YTRA changes the white space in the y or vertical direction. By itself this is useful in solving linespacing issues. Combined with other axes it contributes to opsz, potentially HGHT among many options.
 
-**Conventionality benefits:** linespacing
+**Conventionality benefits:** Users, font vendors and software developers will benefit from the consistent naming of these parametric axes in the development of more expansive design spaces, improvement of underlining typography, and programatic typographic enhancements.
 
-**Interoperability benefits:** 
+**Interoperability benefits:** linespacing, design space
 
 ## Proposed Axis: `yopq`
 
@@ -173,17 +172,17 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **UI recommendations:** Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface
 
-**Script or language considerations:** 
+**Script or language considerations:** Many languages and scripts 
 
 **Related axes:** wght, width, opsz
 
 **Similar axes:** N/A
 
-**Additional information:** 
+**Additional information:** YOPQ changes the black in the y or vertical direction. By itself it expands the design space, by providing reverse contrast. Combined with XOPQ it can create more legible type at small sizes in platforms, and languages where hinting is not available.
 
-**Conventionality benefits:** contrasting
+**Conventionality benefits:** Users, font vendors and software developers will benefit from the consistent naming of these parametric axes in the development of more expansive design spaces, improvement of underlining typography, and programatic typographic enhancements.
 
-**Interoperability benefits:** 
+**Interoperability benefits:** contrasting, design space, legibility
 
 ## Proposed Axis: `ytlc`
 
@@ -205,17 +204,17 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **UI recommendations:** Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface
 
-**Script or language considerations:** 
+**Script or language considerations:** Latin Primarily
 
 **Related axes:** opsz, wght
 
 **Similar axes:** N/A
 
-**Additional information:** 
+**Additional information:** YTLC changes the y direction or white space in lowercase letters. This axis contributes to opsz by raising the lowecase to increase legibility in small sizes. By allowing this axes to be used independently of opsz, the axis contributes to expanding the design space of a typeface.
 
-**Conventionality benefits:** height matching
+**Conventionality benefits:** Users, font vendors and software developers will benefit from the consistent naming of these parametric axes in the development of more expansive design spaces, improvement of underlining typography, and programatic typographic enhancements.
 
-**Interoperability benefits:** 
+**Interoperability benefits:** height matching, design space
 
 ## Proposed Axis: `ytuc`
 
@@ -237,17 +236,17 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **UI recommendations:** Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface
 
-**Script or language considerations:** 
+**Script or language considerations:** Latin Primarily
 
 **Related axes:** xtra, xopq 
 
 **Similar axes:** hght
 
-**Additional information:** 
+**Additional information:** YTUC changes the y direction or white space in uppercase letters. By itself, contributes to the design space when building of small, medium and tall captials, or unicase. 
 
-**Conventionality benefits:** height matching
+**Conventionality benefits:** Users, font vendors and software developers will benefit from the consistent naming of these parametric axes in the development of more expansive design spaces, improvement of underlining typography, and programatic typographic enhancements.
 
-**Interoperability benefits:** 
+**Interoperability benefits:** height matching, design space
 
 ## Proposed Axis: `ytde`
 
@@ -269,17 +268,17 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **UI recommendations:** Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface
 
-**Script or language considerations:** 
+**Script or language considerations:** Latin Primarily
 
 **Related axes:** ytra, ytuc, ytlc
 
 **Similar axes:** N/A
 
-**Additional information:** 
+**Additional information:** YTDE changes the y or vertical descenders. Contributes to opsz in making small sizes fit better in text settings. By itself it is useful on adjusting letters when leading is reduced, in all sizes. Very useful in responsive design when headlines change from sinlge lines to multiple lines of text.
 
-**Conventionality benefits:** linespacing
+**Conventionality benefits:** Users, font vendors and software developers will benefit from the consistent naming of these parametric axes in the development of more expansive design spaces, improvement of underlining typography, and programatic typographic enhancements.
 
-**Interoperability benefits:** 
+**Interoperability benefits:** linespacing, design space
 
 ## Proposed Axis: `ytas`
 
@@ -301,17 +300,17 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **UI recommendations:** Users may choose to program a variant in connection to direct or conjunctive input for a page description language, or via a user interface
 
-**Script or language considerations:** 
+**Script or language considerations:** Latin Primarily
 
 **Related axes:** opsz, ytlc, ytde
 
 **Similar axes:** N/A
 
-**Additional information:** 
+**Additional information:** YTAS changes the y or vertical ascenders. Contributes opsz in making type fit better when size is reduced.
 
-**Conventionality benefits:** linespacing
+**Conventionality benefits:** Users, font vendors and software developers will benefit from the consistent naming of these parametric axes in the development of more expansive design spaces, improvement of underlining typography, and programatic typographic enhancements.
 
-**Interoperability benefits:** 
+**Interoperability benefits:** linespacing
 
 ## Proposed Axis: `pwth`
 
@@ -319,7 +318,7 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **Name:** Width (Parametric)
 
-**Axis type:** Composite
+**Axis type:** Optical
 
 **Description:** Used to vary width of text from narrower to wider; may be constructed by blending other primary axes, or via referenced instances of other
 axes
@@ -334,7 +333,7 @@ axes
 
 **UI recommendations:** Primarily through end-user interfaces
 
-**Script or language considerations:** 
+**Script or language considerations:** Many languages and scripts 
 
 **Related axes:** Always: xtra xopq. Sometimes: yopq ytos ytus
 
@@ -342,7 +341,7 @@ axes
 
 **Additional information:** This value range starts at 0 because if width is zero, counterforms are all closed in; if the XTRA value is negative, that doesn't matter in the blended axes. 
 
-**Conventionality benefits:** 
+**Conventionality benefits:** Users, font vendors and software developers will benefit from the consistent naming of these parametric axes in the development of more expansive design spaces, improvement of underlining typography, and programatic typographic enhancements.
 
 **Interoperability benefits:** 
 
@@ -352,7 +351,7 @@ axes
 
 **Name:** Weight (Parametric)
 
-**Axis type:** Composite
+**Axis type:** Optical
 
 **Description:** Used to vary stroke thicknesses or other design details to give variation from lighter to blacker; may be constructed by blending other primary axes, or via referenced instances of other
 axes
@@ -367,7 +366,7 @@ axes
 
 **UI recommendations:** Primarily through end-user interfaces
 
-**Script or language considerations:** 
+**Script or language considerations:** Many languages and scripts 
 
 **Related axes:** Always: xtra xopq. Sometime: yopq ytlc ytos (y overshoot at xheight or above) ytus (y undershoot at baseline or below)
 
@@ -375,7 +374,7 @@ axes
 
 **Additional information:** This value range starts at 1 because if it was zero, no ink would be drawn. 
 
-**Conventionality benefits:** 
+**Conventionality benefits:** Users, font vendors and software developers will benefit from the consistent naming of these parametric axes in the development of more expansive design spaces, improvement of underlining typography, and programatic typographic enhancements.
 
 **Interoperability benefits:** 
 
