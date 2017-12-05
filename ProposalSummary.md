@@ -1,4 +1,4 @@
-# Proposal: Parametric Axes
+# Proposal: Parametric and Optical Axes
 
 ## Administrative Information
 **Proposers name:** Sam Berlow
@@ -7,7 +7,7 @@
 
 **Proposal name:** Parametric Axes
 
-**Date of submission:** 12/4/2017
+**Date of submission:** 12/5/2017
 
 **New or revised proposal:** New
 
@@ -55,7 +55,7 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **Similar axes:** See individual axis proposals
 
-**Axis type:** Parametric
+**Axis type:** Parametric and Optical
 
 ## Proposed Axis: `xtra`
 
