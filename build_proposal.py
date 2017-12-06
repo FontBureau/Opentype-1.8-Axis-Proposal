@@ -54,6 +54,15 @@ with open("ProposalSummary.md", 'w') as proposal:
 	for axis in reader:
 # 		for k,v in axis.items():
 # 			print(k, ':', v)
+
+		imgurl = "https://axes-proposal.typenetwork.com/proposal/images/animation-{}.gif".format(axis['Tag'])
+		try:
+			img = urlopen(imgurl)
+			imgurl = img.geturl()
+			img.close()
+		except:
+			imgurl = None
+
 		proposal.write("""
 ## Proposed Axis: `{axis[Tag]}`
 
@@ -73,7 +82,7 @@ with open("ProposalSummary.md", 'w') as proposal:
 
 **Suggested programmatic interactions:** {axis[Suggested programmatic interactions]}
 
-**UI recommendations:** {axis[UI Recommeddations]}
+**UI recommendations:** {axis[UI Recommendations]}
 
 **Script or language considerations:** {axis[Script or Language considerations]}
 
@@ -85,8 +94,14 @@ with open("ProposalSummary.md", 'w') as proposal:
 
 **Conventionality benefits:** {axis[Conventionality benefits]}
 
-**Interoperability benefits:** {axis[Interoperabiilty benefits]}
+**Interoperability benefits:** {axis[Interoperability benefits]}
 """.format(axis=axis))
+
+		if imgurl:
+			proposal.write("""
+**Demonstration:**
+![Demonstration]({})
+""".format(imgurl))
 
 	proposal.write("""
 ## Justification
