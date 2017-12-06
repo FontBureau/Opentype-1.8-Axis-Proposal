@@ -15,42 +15,23 @@
 **Previous revision date:** N/A
 
 ## General Technical Information
-**Overview:** Type users are familiar with the attributes of a typeface family.
-Traditionally some of the most common attributes are available as named font instances (or styles) within font families, such as weight or width (e.g. Bold or Condensed.)
-Some attributes are also already recorded in the font metadata fields of the OpenType v1.0 specification, such as values in the OS/2 table (e.g. x-height).
-But these could not be altered by users, and this led to widespread misunderstandings about how typography is shaped by the attributes of typefaces.
+**Overview: Axes Proposal Part I**
 
-The new variable fonts aspects of the OpenType v1.8 specification offers the potential to improve that situation.
-It launched with some registered axes that pertain to these attributes, such as width and weight, and introduced new ones such as optical size.
-This proposal contains axes pertaining to other attributes that all users are familiar with, such as descender length, and some that are less common, such as grade.
+Most type users are familiar with the weight, width and postural (slant), attributes of a typeface family, and many users are familiar with fonts mastered for different optical size ranges. Traditionally some of the most common attributes are available as named font instances (or styles) within font families. These attributes are recorded in the font metadata fields of the OpenType v1.0 specification, along with other values in the OS/2 table (e.g. cap height and x-height). But these could not be altered by users, and this led to widespread simplification about how typography is formed from the attributes of typefaces.
 
-This proposal is for a set of axes that are inter-related, and form a gestalt system.
-We designed their numeric ranges as a unified set, built on typographic tradition where the sizes of shapes are reasoned about in per-mille-of-em.
+Increasing numbers of type users over the past quarter century of static type composition, as for print, with this meta data applied to Latin and other world scripts, have found difficulties with the limited metadata, and compositions mixing scripts in use can involve users wanting to manipulate more parameters than the format contains, or applications offer. In addition, and combinatorially, the development of digital publishing in PostScript or via http; has brought together the perfect need for a more in-depth and complete set of metadata contained in fonts.
 
-The most important aspect of the system is that it can be used to compose ‘higher level’ axes by blending together ‘lower level’ axes, so that users can control the parameters of high level type attributes with precision.
-While the OpenType v1.8.0 specification already has registered axes for weight and width, we are proposing ‘Parametric Weight’ and ‘Parametric Width’ axes that are free from backwards compatibily concerns, and offer the same per-mille-of-em user experience as our other axes. 
+The variable fonts specification, included in the recent OpenType v1.8 font format has been demonstrated capable of changing that situation by the creation and use of a collection of axes more powerfully suited to the tasks of responsive world typography. Variable fonts launched with some registered axes that pertain to these attributes, such as width and weight, and introduced new ones such as optical size. This proposal contains additional axes pertaining to Latin and universal attributes that many users are familiar with, such as x height, and some that are less obvious, such as the vertical depth of descenders.
 
-Such composition has implications for filesize;
-we believe that these axes are useful today in released fonts (e.g. Amstelvar) and they can become even more efficient with future changes to the OpenType specification for composing axes. 
-But that is no reason to delay their registration.
-While it would be useful to register each axis to make it individually interopable, making the system interoperable is essential to realising its full value.
-A network effect is at play:
-The potential functionality for typographers increases as each attribute can be combined with the others, creating exponential possibilities.
+This initial proposal is for the primary set of axes that are inter-related, and form a gestalt system for Latin, and beyond. For world scripts,  it offers the potential for any world’s script to be the default around which a variable is designed, or for a default to contain all of the world’s scripts, offering a multitude of options for many users. Following the pervious examples, it means a Latin Geometric Sans variable font with weight and width axes, meaning each instance in the variable space has width and weight meta data, it can now have an x-height parameter under separate control for better appearance at small sizes, and thus multiple possible styles for each width and weight. Or a Latin design with weight, width and optical size axes, in a font with Chinese glyphs offering the same, can have multiple descender lengths depending on whether Chinese or Latin is the primary script in a text run.
 
-We also want to note that this proposal is limited to Latin, intentionally.
-During the development of this proposal we were concerned with multi-script typography, where Latin and non-Latin scripts are used together on a page.
-Since different scripts have different vertical proportion attributes, we see a need for more axes than are contained here.
-We will make a second proposal with those, if this proposal is accepted.
+Instead of choosing common general terms and then dissecting such a meaning down to this purpose, we created axis tag names for all of our proposals to represent direction, color and alignments of glyph groups, creating it’s own language, (one that has become quite convenient internally as we discuss the details of all kinds of type design projects, variable or not) . We chose value ranges to form a unified programmable set, built on typographic tradition where measures of variation are reasoned about in per-mille-of-em, points and degrees, among other things. This allows the definition of values relative either to a variable font, or values absolute and shared among any other fonts so measured.
 
-However, this proposal does include axes that change attributes inherent to all writing systems:
-Controlling overall opaque or transparent area in X or Y dimensions (`xtra`, `ytra`, `xopq`, `yopq`)
-This deconstruction of letterforms leads to the most expansive design spaces, and in turn those create the biggest potential for improvements to typography, especially enhancements that are achieved through responsive programming.
-Conventionality is one of the benefits of registration, and we carefully chose these axis names and tags to convey their systematic nature.
+So, this proposal includes axes that change Latin type attributes, but includes some that are inherent to all writing systems, when represented in a single variable font. Beyond these and into the decentralization from Latin parameters, an important aspect of these proposed “lower level” axes is they can be used to define ‘higher level’ axes like weight, by blending, or specifying instance of the lower level axes as extremes of the registered axes. This allows both developers and users to control the low level parameters of high level type attributes with precision for a multitude of applications alluded to above. Part of this includes proposing ‘Parametric Weight’ and ‘Parametric Width’ axes that  offer the same per-mille-of-em user experience as our other axes, and thus differ from the registered axes, wght and wdth in value systems.
 
-We believe these axes allow type users, especially software developers and educators, to have a clearer picture of how typography is shaped by the attributes of typefaces.
-These axes can be useful both when controlled by programs, or by changes input manually via user interfaces. 
+We believe these axes allow type users, especially software developers and educators, to have a clearer picture of how typography is shaped by the attributes of typefaces. A near-future proposal, will follow with an overview containing world script alignments, time-base axes and axes for glyph-referencing among instances.
 
-By allowing type users to control these attributes in concert, and precisely, they enable a new kind of responsive typography.
+(Maybe: Making the system interoperable via registration is not essential to realizing the full value of variations. But a network effect is at play: as the potential functionality for typographers increases when each attribute can be combined with the others, registered axes or not, the exponential possibilities not being interoperable will likely exacerbate issues of responsive design and world scripts, beyond public programability or user interface-ability beyond local levels. )
 
 **Related axes:** See individual axis proposals
 
