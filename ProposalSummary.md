@@ -86,6 +86,8 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **Similar axes:** N/A
 
+![Image of xtra](Opentype-1.8-Axis-Proposal/proposal/images/animation-xtra.gif)
+
 **Additional information:** XTRA changes the white space in the x or horizontal direction. This useful in adjusting type horizontally without changing the opaque (black) Useful in VR, TV, and justification of text blocks.
 
 **Conventionality benefits:** Users, font vendors and software developers will benefit from the consistent naming of these parametric axes in the development of more expansive design spaces, improvement of underlining typography, and programatic typographic enhancements.
