@@ -94,10 +94,7 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **Demo**
 Inline-style: 
-![alt text](Opentype-1.8-Axis-Proposal/proposal/images/animation-xtra.gif)
-
-Demo
-Opentype-1.8-Axis-Proposal/proposal/images/animation-xtra.gif
+(Opentype-1.8-Axis-Proposal/proposal/images/animation-xtra.gif)
 
 ## Proposed Axis: `xopq`
 
