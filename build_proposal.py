@@ -35,7 +35,7 @@ with open("ProposalSummary.md", 'w') as proposal:
 
 **Proposal name:** Parametric Axes
 
-**Date of submission:** 12/5/2017
+**Date of submission:** 12/6/2017
 
 **New or revised proposal:** New
 
