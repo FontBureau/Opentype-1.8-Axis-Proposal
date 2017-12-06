@@ -92,10 +92,6 @@ By allowing type users to control these attributes in concert, and precisely, th
 
 **Interoperability benefits:** justification, legibility
 
-**Demo**
-Inline-style: 
-(Opentype-1.8-Axis-Proposal/proposal/images/animation-xtra.gif)
-
 ## Proposed Axis: `xopq`
 
 **Tag:** xopq
