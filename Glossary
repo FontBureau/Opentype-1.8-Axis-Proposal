@@ -1,0 +1,67 @@
+## Glossary of terms
+
+Ascender
+The part of a lowercase letter that extends above the typeface’s x-height. Not to be confused with "TypoAscender".
+
+Bracket
+In a serif typeface, the connection between a serif and the main stroke. The bracket may be a curve, a slope, or any combination or variation of these. Unbracketed serifs meet the main stroke at a sharp angle.
+
+Character Width
+Horizontal space taken up by the character, including the built-in white space (side bearings) on either side.
+
+Contrast
+Degree of variation of thickness between thick strokes and thin strokes of a character. High-contrast typefaces have greater variation in stroke thickness than low-contrast typefaces.
+
+Descender
+The part of a lowercase letter that extends below the typeface’s baseline. Not to be confused with "TypoDescender".
+
+Ink Trap
+Exaggerated wedge of white space where strokes of a letter join at an angle, to avoid the appearance at small sizes of the angle filling in (originally, literally filling with ink).
+
+Joint
+In a character, where one stroke meets another.
+
+Kerning
+Adjustment of horizontal space between two characters.
+
+Leading
+Vertical space between two lines of type; usually measured from the baseline of one line to the baseline of the next.
+
+Letter Spacing
+The overall horizontal space between characters.
+
+Monospace
+All the same width. In a monospaced font, each of the characters occupies the same amount of horizontal space.
+
+Opaque
+Solid; not able to be seen through; not transparent. In digital fonts, blocking any object behind it. This is also often referred to as “black,” “color,” or “foreground.”
+
+Optical Size
+Subtle adjustments to a typeface’s design parameters for use at different sizes. Often including larger x-height, wider characters, looser letter spacing, and lower contrast at small sizes, versus tighter letter spacing and higher contrasts, along with a smaller x-height, and narrower character widths, in many designs at large sizes.
+
+Point size
+A system of measurement originally divided into 72.289 parts per inch, rounded to 72 since the late 1990's.
+
+Proportional
+Widths varying with the character shape. In a proportional font, different characters occupy different amounts of horizontal space.
+
+Serif
+Short cross-stroke, or part of one, at the end of stroke in a character. May be angled or perpendicular, and may be bracketed or unbracketed.
+
+Stem
+Main vertical stroke of a character.
+
+Transparent
+Allowing light to pass through so that objects behind can be distinctly seen. In digital fonts, not blocking any object behind it. This is also often referred to as “white,” “spacing,” or “background.”
+
+Tracking
+Adjustment of horizontal space consistently across a range of characters.
+
+Weight
+The proportion of black to white within the characters in a font. The overall effect of the typeface often described with words ike: light, medium, bold, heavy, etc. A parameter that can be varied along the "wght" axis of a variable font. Weight may be added by increasing the thickness of only the thick strokes, or of all the strokes in a character depending on design class. In most design classes, the weight is reduced slightly along with the width to produced the same weight as the normal width, and the opposite, weight increases slightly along with width. Weights of a font family should share the same angles in diagonal strokes and curvatures if the optical size and width are the same.
+
+Width
+The proportion of horizontal to vertical space taken up by the characters in a font. The overall effect of the typeface: narrow, wide, condensed, expanded, etc. A parameter that can be varied along the width axis of a variable font.
+
+x-height
+Vertical distance between the baseline and the top of the body of a lowercase letter. Called "x-height" because in most typefaces, the top of the x is flat and easy to measure; rounded letters like o normally have a slight overshoot. The x-height can be a factor in a font’s optical size.
