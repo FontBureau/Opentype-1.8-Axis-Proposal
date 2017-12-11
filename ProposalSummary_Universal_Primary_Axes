@@ -15,8 +15,7 @@
 
 ## General Technical Information
 
-**Overview:**
-Text TKTK
+**Overview**
 
 **Related axes:** XTRA, YTRA, XOPQ, YOPQ
 
@@ -173,9 +172,9 @@ Text TKTK
 
 **Vendor commitments:** Google Fonts, Font Bureau, TYPETR
 
-**Conventionality benefits:** A secondary benefit is that it encourages people to reason about their typography in per-mille measurements, a conventionality benefit. 
+**Conventionality benefits:** "Black space" or "Positive Shapes" are common concepts in visual arts, but many users don't think about the 'opaque' area of type deconstructed (or essentially isolated) to the Y dimension. This axes helps users to structure their thinking about positive shapes vertically, for the overall/total typeface.
 
-**Interoperability benefits:** The primary benefit of this axis is that is makes optical weight more consistent, compared to the existing wght axis, and this is especially important when switching between families – thus an interop benefit. 
+**Interoperability benefits:** contrasting, design space, legibility
 
-
-
+**Demonstration:**
+![Demonstration](https://axes-proposal.typenetwork.com/proposal/images/animation-yopq.gif)
