@@ -7,7 +7,7 @@
 
 **Proposal name:** Optical Axes Proposal
 
-**Date of submission:** 12/11/2017
+**Date of submission:** 12/12/2017
 
 **New or revised proposal:** New
 
@@ -69,7 +69,7 @@ axes
 
 **Tag:** pwht
 
-**Name:** Weight (Parametric)
+**Name:** Weight (Per Mille)
 
 **Axis type:** Optical
 
@@ -106,7 +106,7 @@ axes
 
 **Tag:** pwht
 
-**Name:** Weight (Parametric)
+**Name:** Weight (Per Mille)
 
 **Axis type:** Optical
 
@@ -156,7 +156,7 @@ axes
 
 **Recommended or required “Regular” value:** N/A
 
-**Suggested programmatic interactions:** Example: Program or script may easily compute the appropriate grade to bold or lighten text for affect. Program may easily set weight without changin width when trying to acheive consistency across platforms.
+**Suggested programmatic interactions:** Example: Program or script may easily compute the appropriate grade to bold or lighten text for affect. Program may easily set weight without changing width when trying to achieve consistency across platforms.
 
 **UI recommendations:** Primarily through end-user interfaces
 
@@ -179,4 +179,6 @@ Demonstration:
 **Conventionality benefits:** "Black space" or "Positive Shapes" are common concepts in visual arts, but many users don't think about the 'opaque' area of type deconstructed (or essentially isolated) to the Y dimension. This axes helps users to structure their thinking about positive shapes vertically, for the overall/total typeface.
 
 **Interoperability benefits:** The primary benefit of this axis is that is makes create contrast in weight without changing width.
+
+
 
