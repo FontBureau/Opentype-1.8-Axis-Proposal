@@ -17,6 +17,15 @@
 
 **Overview**
 
+The goal of this proposal is to name and define universal parametric axes in the X and Y dimensions: X Opaque, Y Opaque, X Transparent, Y Transparent.
+
+Since these axes are for the overall typeface, they are universal across scripts and designs.
+
+Consistently naming and defining these terms and axes will enable developers to consistently refer to and access the core elements of letterforms, which can be used to compose Optical Size, Weight and Width variations. This gives users more precise control over typography than is possible with the existing axes for those high-level typeface attributes. 
+
+An example of a composed “high level” axis is one for “grade,” where X Transparent is increased as X Opaque is decreased, keeping overall glyph widths the same while reducing the apparent weight of the letterforms; using existing registered Weight and Width axes in tandem like this produces uneven results (see the “Winner” example in https://pixelambacht.nl/2017/variable-hover-effects.) An example of programmatic use would be to slightly reduce or expand the X Transparent axis during a paragraph justification algorithm, while keeping all other axis choices the same. 
+
+
 **Related axes:** XTRA, YTRA, XOPQ, YOPQ
 
 **Similar axes:** None
