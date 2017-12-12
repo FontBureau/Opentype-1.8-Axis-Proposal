@@ -102,42 +102,6 @@ axes
 
 **Interoperability benefits:** The primary benefit of this axis is that is makes optical weight more consistent, compared to the existing wght axis, and this is especially important when switching between families – thus an interop benefit. 
 
-## Proposed Axis Details: `pwht`
-
-**Tag:** pwht
-
-**Name:** Weight (Per Mille)
-
-**Axis type:** Optical
-
-**Description:** Used to vary stroke thicknesses or other design details to give variation from lighter to blacker; may be constructed by blending other primary axes, or via referenced instances of other
-axes
-
-**Valid numeric range:**  1 to 2000
-
-**Scale interpretation:** Values should be interpreted as per-mille-of-em
-
-**Recommended or required “Regular” value:** N/A
-
-**Suggested programmatic interactions:** Example: Program or script may easily compute the appropriate weight to get a specific stem thickness.
-
-**UI recommendations:** Primarily through end-user interfaces
-
-**Script or language considerations:** Can be used for all scripts
-
-**Related axes:** Always: xtra xopq. Sometime: yopq ytlc ytos (y overshoot at x height or above) ytus (y undershoot at baseline or below)
-
-**Similar axes:** wght
-
-**Additional information:** This value range starts at 1 because if it was zero, no ink would be drawn. 
-
-## Justification
-
-**Vendor commitments:** Google Fonts, Font Bureau, TYPETR
-
-**Conventionality benefits:** A secondary benefit is that it encourages people to reason about their typography in per-mille measurements, a conventionality benefit. 
-
-**Interoperability benefits:** The primary benefit of this axis is that is makes optical weight more consistent, compared to the existing wght axis, and this is especially important when switching between families – thus an interop benefit. 
 
 ## Proposed Axis Details: `grad`
 
@@ -170,7 +134,6 @@ axes
 
 Demonstration:
 ![Demonstration](https://axes-proposal.typenetwork.com/proposal/images/grad.gif)
-
 
 ## Justification
 
