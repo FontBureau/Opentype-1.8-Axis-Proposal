@@ -168,6 +168,9 @@ axes
 
 **Additional information:** This value range starts at 1 because if it was zero, no ink would be drawn. 
 
+Demonstration:
+
+
 ## Justification
 
 **Vendor commitments:** Google Fonts, Font Bureau, TYPETR
