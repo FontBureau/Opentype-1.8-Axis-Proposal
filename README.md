@@ -1,3 +1,16 @@
+## Administrative Information
+**Proposers name:** Sam Berlow
+
+**Vendor affiliation:** Type Network
+
+**Proposal name:** Optical Axes Proposal
+
+**Date of submission:** 12/12/2017
+
+**New or revised proposal:** New
+
+**Previous revision date:** N/A
+
 Everyone using fonts is familiar with the weight, width and postural (slant) attributes of a typeface family, and many professional typographers are familiar with fonts mastered for different optical size ranges. Traditionally, the most common attributes are available as named font instances (or styles) within font families. These attributes and others are also recorded in the font metadata fields of the OpenType v1.0 specification, such as values in the OS/2 table (e.g. cap height and x-height.)
 
 But these could not be altered by users, and this led to widespread simplification about how typography is formed from the attributes of typefaces. Users want to manipulate more parameters than static font formats contain, or applications could offer. The metadata that was available was mostly for Latin, and the users of world scripts have found difficulties with more limited metadata, especially when mixing scripts on a page for print or digital media.
