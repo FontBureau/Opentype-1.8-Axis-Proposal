@@ -132,7 +132,8 @@ axes
 
 **Additional information:** This value range starts at 1 because if it was zero, no ink would be drawn. 
 
-Demonstration:
+**Demonstration:**
+![Demonstration](https://axes-proposal.typenetwork.com/proposal/images/grad.gif)
 
 
 ## Justification
