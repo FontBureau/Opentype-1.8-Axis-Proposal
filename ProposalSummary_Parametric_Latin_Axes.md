@@ -1,20 +1,5 @@
 # Proposal: Parametric Latin Axes
 
-## Administrative Information
-**Proposers name:** Sam Berlow
-
-**Vendor affiliation:** Type Network
-
-**Proposal name:** Parametric Latin Axes
-
-**Date of submission:** 12/12/2017
-
-**New or revised proposal:** New
-
-**Previous revision date:** N/A
-
-## General Technical Information
-
 **Overview**
 These four Latin axes apply to glyphs and parts of glyphs specific to the Latin script: Y Uppercase, Y Lowercase, Y Ascender, Y Descender.
 
