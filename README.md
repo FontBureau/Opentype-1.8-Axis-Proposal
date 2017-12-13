@@ -3,7 +3,7 @@
 
 **Vendor affiliation:** Type Network
 
-**Proposal name:** Optical Axes Proposal
+**Proposal names:** Optical Axes Proposal, Parametic Latin, and Universal Latin
 
 **Date of submission:** 12/12/2017
 
