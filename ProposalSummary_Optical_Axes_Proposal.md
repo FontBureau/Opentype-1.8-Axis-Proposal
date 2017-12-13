@@ -1,18 +1,5 @@
 # Proposal: Optical Axes Proposal
 
-## Administrative Information
-**Proposers name:** Sam Berlow
-
-**Vendor affiliation:** Type Network
-
-**Proposal name:** Optical Axes Proposal
-
-**Date of submission:** 12/12/2017
-
-**New or revised proposal:** New
-
-**Previous revision date:** N/A
-
 ## General Technical Information
 
 **Overview**
