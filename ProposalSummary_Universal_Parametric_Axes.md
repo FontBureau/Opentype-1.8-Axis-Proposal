@@ -1,18 +1,5 @@
 # Proposal: Universal Parametric Axes
 
-## Administrative Information
-**Proposers name:** Sam Berlow
-
-**Vendor affiliation:** Type Network
-
-**Proposal name:** Universal Parametric Axes
-
-**Date of submission:** 12/12/2017
-
-**New or revised proposal:** New
-
-**Previous revision date:** N/A
-
 ## General Technical Information
 
 **Overview**
