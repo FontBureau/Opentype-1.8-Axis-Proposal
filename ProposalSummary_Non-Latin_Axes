@@ -1,5 +1,8 @@
-Overview
+# Proposal: Non-Latin Axes
 
+## General Technical Information
+
+**Overview**
 Today’s multiscript type designer faces two major options when mixing more than one script in a typeface family: to compromise one or both scripts to the ideals of the other; or, alternatively, to make multiple instances of the font to provide uncompromised versions of each.
 
 The compromises occur in all of the typographic parameters listed in A. Primary Type Axes, and surface in the choices that need to be made in presenting a unified appearance of width, weight, and height among glyphs of different scripts. These compromises come in a variety of sizes, from small (as when Latin and Cyrillic need to work together) to large (as when Chinese and Arabic have to work together). And, of course, there are the supersized compromises in OS fonts, where the typeface family contains fifty-three scripts.
@@ -9,5 +12,73 @@ In these scenarios, the type developer is challenged to come up with a single ha
 Alignments operate differently in typography. So in variable fonts, they must be able to operate independently of one another at any given weight, width, and size, ahead of whatever decisions occur in those attributes. Until now, all of the scripts of Unicode have shared what could be read as Latin alignments in the OpenType spec.
 
 This proposal does not prevent type developers from continuing to share one set of registered alignments among all the scripts of Unicode. Rather, it suggests that if variable font developers want to maintain compression, performance, and quality in multiscript design, then registered axes for the alignments specific to each script are required. And Chinese alignment values that are definable independently of Latin alignment values are a good place to start.
+
+**Related axes:** XTRA, YTRA, XOPQ, YOPQ, YTUC, YTLC, YTDE, YTAS, PWTH, PWGT
+
+**Similar axes:** YTRA and XTRA
+
+**Axis type:** Parametric
+
+## Proposed Axis Details: `ytch`
+
+**Tag:** ytch
+
+**Name:** y transparent Chinese (Parametric)
+
+**Axis type:** Parametric
+
+**Description:** values represent the height of Chinese glyphs
+
+**Valid numeric range:**  1 to 2400
+
+**Scale interpretation:** Values can be interpreted as per-mille-of-em changes, between any instances in the axis
+
+**Recommended or required “Regular” value:** N/A
+
+**Suggested programmatic interactions:** Example: Applications may choose to select a variant in connection to an input for more or less ytch, or it might be programmatically used
+
+**UI recommendations:** Primarily through end-user interfaces
+
+**Script or language considerations:** Can be used for all Chinese
+
+**Related axes:** xtch
+
+**Similar axes:** wdth, xtra
+
+**Additional information:** 
+
+## Proposed Axis Details: `xtch`
+
+**Tag:** xtch
+
+**Name:** x transparent Chinese
+
+**Axis type:** Parametric
+
+**Description:** values represent the width of Chinese glyphs
+
+**Valid numeric range:** 1 to 8000
+
+**Scale interpretation:** Values should be interpreted as per-mille-of-em
+
+**Recommended or required “Regular” value:** N/A
+
+**Suggested programmatic interactions:**
+
+**UI recommendations:** Primarily through end-user interfaces
+
+**Script or language considerations:** Can be used for Chinese
+
+**Related axes:** Always: ytch
+
+**Similar axes:** xtra
+
+## Justification
+
+**Vendor commitments:** Google Fonts, Font Bureau, TYPETR
+
+**Conventionality benefits:** 
+**Interoperability benefits:** 
+
 
 
