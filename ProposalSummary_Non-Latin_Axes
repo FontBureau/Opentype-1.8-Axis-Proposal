@@ -13,7 +13,7 @@ Alignments operate differently in typography. So in variable fonts, they must be
 
 This proposal does not prevent type developers from continuing to share one set of registered alignments among all the scripts of Unicode. Rather, it suggests that if variable font developers want to maintain compression, performance, and quality in multiscript design, then registered axes for the alignments specific to each script are required. And Chinese alignment values that are definable independently of Latin alignment values are a good place to start.
 
-**Related axes:** XTRA, YTRA, XOPQ, YOPQ, YTUC, YTLC, YTDE, YTAS, PWTH, PWGT
+**Related axes:** XTRA, YTRA
 
 **Similar axes:** YTRA and XTRA
 
