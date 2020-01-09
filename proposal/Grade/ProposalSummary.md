@@ -108,4 +108,4 @@ This suggests the range can be equivalent to weight, which is misleading.
 
 #### Why not per mille of em, like parametric axes?
 
-Per mille of em is not -/+ from a neutral default; grade is not a parametric axis, and in avar2 it will be synthesized from changes to parametric axes XTRA, XOPQ, and YOPQ.
+Per mille of em is not -/+ from a neutral default; grade is not a parametric axis, and in avar2 it may be synthesized from changes to parametric axes XTRA, XOPQ, and YOPQ.
