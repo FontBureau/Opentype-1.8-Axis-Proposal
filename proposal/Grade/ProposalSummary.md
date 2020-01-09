@@ -19,7 +19,7 @@ The Grade axis allows you to finesse how bold or light your type is, without cha
 
 The term was coined at the Font Bureau foundry in the early 1990s, connoting motor oils and the way letterpress type leaves a bolder print with heavier inks.
 
-**Related axes:** Weight, especially. Ideally a Grade axis is related to and works Optically well throughout the entire design space, across all axes. 
+**Related axes:** Weight, though the change to weight in Grades is smaller, and change of weight typically changes width. Ideally a Grade axis is ranged for and works Optically well throughout the entire design space, across all axes. 
 
 **Similar axes:** None proposed here. 
 
@@ -62,14 +62,13 @@ implementers to understand how the axis should be used.]
 
 ## Justification
 
-**Vendor commitments:** Vendors that plan to use this axis, if registered, include Google, TypeNetwork, Font Bureau. 
+**Vendor commitments:** Vendors that plan to use this axis, if registered, include Google, TypeNetwork, Font Bureau, Microsoft, Axis-Praxis, Fontsmith and many web design services vendors.
 
 **Conventionality benefits:** Registering Grade is important because it is already adopted pre-otvar by a number of font vendors, so establishing a standard that encompasses all ways to implement Grade can reduce fragmentation of custom axes.
 
-It is likely to be become broadly adopted or familiar because the value of the use cases for digital product design is high. 
+It is likely to become broadly adopted or familiar because the value of the use cases for digital product design is high. 
 
-**Interoperability benefits:** \[Indicate ways you think interoperability of this axis will benefit
-end users, font vendors or software developers.]
+**Interoperability benefits:** The registration of this axis and values will allow content and device developers to automate the changes grad will enable for adjustment of static and streaming typography to background, script and device conditions.
 
 ## Other Supporting Information
 
