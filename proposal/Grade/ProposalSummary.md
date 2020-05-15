@@ -15,11 +15,14 @@
 
 **Overview:**
 
-The Grade axis allows you to finesse how bold or light your type is, without changing the layout of the text, because letter widths and inter letter spacing and kerning all remain fixed, so there are no changes to line breaks or page layout.
+The Grade axis allows you to finesse how bold or light your type is, without changing the layout of the text, because letter widths and interletter spacing and kerning all remain fixed, so there are no changes to line breaks or page layout.
 
 The term was coined at the Font Bureau foundry in the early 1990s, connoting motor oils and the way letterpress type leaves a bolder print with heavier inks.
 
-**Related axes:** Weight, though the change to weight in Grades is smaller, and change of weight typically changes width. Ideally a Grade axis is ranged for and works Optically well throughout the entire design space, across all axes. 
+In terms of parametric axes, Grade adjusts the transparent versus opaque forms, without changing widths or heights of glyphs. 
+
+**Related axes:** Weight, though the change to weight in Grades is smaller, and change of weight typically changes width. 
+Ideally a Grade axis is ranged for the entire design space, across all axes, and works optically well throughout. 
 
 **Similar axes:** None proposed here. 
 
@@ -37,17 +40,27 @@ TODO: Double check [Guidance for Axis Details](GuidanceForAxisDetails.md) on thi
 
 **Valid numeric range:** -1.0 to 1.0
 
-**Scale interpretation:** A negative value represents a reduction in optical weight, while a positive value represents an increase in optical weight. The scale is relative only to itself, so 1.0 represents the maximum amount of positive graded weight and -1.0 the maximum negative graded weight.
+**Scale interpretation:** A negative value represents a reduction in optical weight, while a positive value represents an increase in optical weight. 
+The scale is relative only to itself, so 1.0 represents the maximum amount of positive graded weight and -1.0 the maximum negative graded weight.
+In Amstelvar the Grade axis varies from -1.0, which is around 1/3 the weight of the Regular, to 1.0 which is around 2x.
 
 **Required &ldquo;Regular&rdquo; value:** 0
 
+**Recommended Use:**
+
+In any output conditions where any weight is being distorted by the process, a corrective value can be employed to restore the weight to its intended appearance.
+Grade can be used to correct for the distortions between; offset and gravure printing, light and dark mode interfaces, and lighter or darker than normal screen rendering.
+
 **Suggested programmatic interactions:** 
 
-In UX design, the primary use case is **more accessibility**, by adjusting type against background color changes to control contrast ratios, such as in Dark Mode. Without it, Dark Mode can be stylistically limiting if the type is light overall, or contains particularly thin strokes in a high contrast design.
+In UX design, the primary use case is **more accessibility**, by adjusting type against background color changes to control contrast ratios, such as in Dark Mode.
+Without it, Dark Mode can be stylistically limiting if the type is light overall, or contains particularly thin strokes in a high contrast design.
 
 A secondary use case is **smooth interactivity**, adjusting type based on pointer position (eg on hover) without redrawing any layout (text or ui.)
 
-Another UX use case is optimization for specific devices or platforms. Lower screen resolutions or rendering software do not work well when representing any Weight lighter than 200. Such optimization is also useful in print, when a spread will use different papers, inks and presses on each side, so the digital type has to be different to look the same on the finished document.
+Another UX use case is optimization for specific devices or platforms.
+Lower screen resolutions or rendering software do not work well when representing any Weight lighter than 200.
+Such optimization is also useful in print, when a spread will use different papers, inks and presses on each side, so the digital type has to be different to look the same on the finished document.
 
 Finally, when pairing two or more different families - often for a typographic purpose, or perhaps for multilingual texts - Grade can be used for matching the weight of one family to another.
 
@@ -55,7 +68,8 @@ Each of these use cases can be done by eye, or programmatically.
 
 **UI recommendations:** TODO: See the Guidance file for details on what information is expected.
 
-**Script or language considerations:** Grade is applicable to all scripts or languages. TODO: Describe any special considerations for applying the axis to specific scripts or languages.
+**Script or language considerations:** Grade is applicable to all scripts or languages.
+TODO: Describe any special considerations for applying the axis to specific scripts or languages.
 
 **Additional information:** \[Provide any additional information that may be needed or helpful for
 implementers to understand how the axis should be used.]
@@ -76,7 +90,9 @@ TODO: Provide GIF to demonstrate the behaviour of Grade
 
 #### Existing Examples
 
-TODO: Provide links to all known fonts.
+* https://github.com/TypeNetwork/Amstelvar
+* https://github.com/TypeNetwork/Roboto-Flex
+* https://github.com/agyeiarcher/Crispy-VF
 
 #### Why is -1.0..1.0 with default 0 the best scale to define for this axis?
 
@@ -91,6 +107,8 @@ Here are a few reasons why other scales aren't as good:
 This would be okay, but it isn't as good because as above it implies the differences are larger; grade is typically used in a subtle way, so a change from 0 to 2 to 10 feels bigger than a change from 0.0 to 0.2 to 10 – and 0 to 200 to 1000 even bigger still. (And -0.1..0.1 would be too far in the opposite direction, because the effect of grade isn't always subtle.)
 
 #### Why not -100..100%, default 0%?
+
+A percent is relative to some specific form, such as the stem width of `H`.
 
 This would be actually bad because a percentage is different to a plain number in ways that aren't appropriate to Grade, by being more strongly associated with normalization. 
 
