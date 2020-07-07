@@ -142,7 +142,7 @@
 	<script src="//d3js.org/d3.v3.min.js"></script>
 	<script type="text/javascript"charset="utf-8">
 		$(document).ready(function() {
-			d3.text("https://docs.google.com/spreadsheets/d/e/2PACX-1vRl0zD7-mCywXYoFXbW55hdGqNY0XxPFUZAfuD6OJDfYPM5eBaQWc3wpQi1RdBQmoCgoWT3OX7iZXXu/pub?gid=0&single=true&output=csv", function(string) {
+			d3.text("https://docs.google.com/spreadsheets/d/e/2PACX-1vQDPjyUrfS27_vcTDjEnz8EznsfWOL5kFxCLDvphUV-9RgwU3o_gM71A1en58x6vrqOXs3-vHajGa1u/pub?gid=0&single=true&output=csv", function(string) {
 				var data = d3.csv.parse(string, function(d) {
 					return {
 						index: +d.index,
