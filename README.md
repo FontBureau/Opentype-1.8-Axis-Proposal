@@ -12,4 +12,4 @@ To install the command line tools and run a local server for development, run:
 
 ## Proposals Source Table
 
-The proposal source material is available in tabular form in [Google Sheets](https://docs.google.com/spreadsheets/d/13QZl_mnEyV4IgJWO_ysGEClQAoX500tdxEsAlJPF_TQ/edit#gid=0) - and is loaded into the page live, using d3.js 
+The proposal source material is available in tabular form in [Google Sheets](https://docs.google.com/spreadsheets/d/1lZcLW7xo39zG3TTv6EK3iLs5t8OjWWPJv0lb9qEnsDE/edit?ts=5a1f1fb3#gid=0) - and is loaded into the page live, using d3.js 
