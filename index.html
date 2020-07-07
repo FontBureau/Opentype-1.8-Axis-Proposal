@@ -142,7 +142,8 @@
 	<script src="//d3js.org/d3.v3.min.js"></script>
 	<script type="text/javascript"charset="utf-8">
 		$(document).ready(function() {
-			d3.text("https://docs.google.com/spreadsheets/d/e/2PACX-1vQDPjyUrfS27_vcTDjEnz8EznsfWOL5kFxCLDvphUV-9RgwU3o_gM71A1en58x6vrqOXs3-vHajGa1u/pub?gid=0&single=true&output=csv", function(string) {
+			// source spreadsheet: https://docs.google.com/spreadsheets/d/1lZcLW7xo39zG3TTv6EK3iLs5t8OjWWPJv0lb9qEnsDE/edit?ts=5a1f1fb3#gid=0
+			d3.text("proposal/axes.csv", function(string) {
 				var data = d3.csv.parse(string, function(d) {
 					return {
 						index: +d.index,
