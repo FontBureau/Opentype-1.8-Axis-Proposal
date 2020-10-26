@@ -11,6 +11,27 @@
 	<link rel="stylesheet" href="https://www.typenetwork.com/assets_content/css/lightbox.css" />
 	<link rel="stylesheet" href="https://www.typenetwork.com/assets_content/css/awesomplete.css" />	
 
+	<link rel="apple-touch-icon" sizes="57x57" href="https://www.typenetwork.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="https://www.typenetwork.com/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="https://www.typenetwork.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="https://www.typenetwork.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="https://www.typenetwork.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://www.typenetwork.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="https://www.typenetwork.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://www.typenetwork.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://www.typenetwork.com/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="https://www.typenetwork.com/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="https://www.typenetwork.com/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="https://www.typenetwork.com/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="https://www.typenetwork.com/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="https://www.typenetwork.com/manifest.json">
+	<link rel="mask-icon" href="https://www.typenetwork.com/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	
+
+
 	<title>Font Bureau OpenType 1.8 Variations Axes Proposals</title>
 
 	<style>
@@ -117,6 +138,9 @@
 			
 				<hr>
 				
+				<div id='variations-guide-populate-me'>
+				</div>
+				
 			</section>
 			
 		</article>
@@ -137,11 +161,9 @@
 	  gtag('config', 'UA-78231280-2');
 	</script>
 
-	<script src='https://www.typenetwork.com/assets_content/js/libs/jquery-1.11.0.min.js'></script>
-	<script src="https://www.typenetwork.com/assets_content/js/functions.js"></script>
-	<script src="//d3js.org/d3.v3.min.js"></script>
-	<script type="text/javascript"charset="utf-8">
-		$(document).ready(function() {
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
 			// source spreadsheet: https://docs.google.com/spreadsheets/d/1lZcLW7xo39zG3TTv6EK3iLs5t8OjWWPJv0lb9qEnsDE/edit?ts=5a1f1fb3#gid=0
 			d3.text("proposal/axes.csv", function(string) {
 				var data = d3.csv.parse(string, function(d) {
@@ -160,9 +182,9 @@
 						demo: d.Demo,
 					};
 				});
-				var section = $("section");
-				$.each(data, function(index, value) {
-					var html = ""
+				var html = "";
+				Object.keys(data).forEach(function(index) {
+					var value = data[index];
 					html+="<h3 id='"+value.tag+"'>"+value.index+". "+value.tag+"</h3>\n";
 					html+="<p>\n";
 					html+="<b>Tag:</b> "+value.tag+"<br>\n";
@@ -180,8 +202,8 @@
 					html+="<h4>Demo</h4>\n";
 					html+="<img src='proposal/images/animation-"+value.tag+".gif' />\n";
 					html+="<hr>\n";
-					section.append(html);
 				});
+				document.getElementById('variations-guide-populate-me').innerHTML = html;
 			});
 		});
 	</script>
