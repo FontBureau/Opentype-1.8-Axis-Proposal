@@ -2,14 +2,14 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	
+
 	<link rel="stylesheet" href="https://www.typenetwork.com/assets_content/css/adobe-blank.css" />
 	<link rel="stylesheet" href="https://www.typenetwork.com/assets_content/css/fonts-momentum-sans.css" />
 	<link rel="stylesheet" href="https://www.typenetwork.com/assets_content/css/icon_font.css" />
 	<link rel="stylesheet" href="https://www.typenetwork.com/assets_content/css/reset.css" />
 	<link rel="stylesheet" href="https://www.typenetwork.com/assets_content/css/style.css" />
 	<link rel="stylesheet" href="https://www.typenetwork.com/assets_content/css/lightbox.css" />
-	<link rel="stylesheet" href="https://www.typenetwork.com/assets_content/css/awesomplete.css" />	
+	<link rel="stylesheet" href="https://www.typenetwork.com/assets_content/css/awesomplete.css" />
 
 	<link rel="apple-touch-icon" sizes="57x57" href="https://www.typenetwork.com/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="https://www.typenetwork.com/apple-touch-icon-60x60.png">
@@ -29,7 +29,7 @@
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
 	<meta name="theme-color" content="#ffffff">
-	
+
 
 
 	<title>Font Bureau OpenType 1.8 Variations Axes Proposals</title>
@@ -41,22 +41,22 @@
 	</style>
 </head>
 <body>
-	
+
 <div class="wrapper">
-	
+
 	<header class="header-global">
 	</header>
-	
+
 	<nav class="nav-global">
 		<ul></ul>
 	</nav>
 	<nav class="nav-user">
 		<ul></ul>
 	</nav>
-	
+
 	<aside class="content-filters">
 		<a class="content-filters-close" href="#">Close</a>
-		
+
 		<h3><a href="#xtra">A. Primary Type Axes</a></h3>
 		<ul>
 			<li><a href="#xtra">1. xtra</a></li>
@@ -67,45 +67,46 @@
 			<li><a href="#ytuc">6. ytuc</a></li>
 			<li><a href="#ytde">7. ytde</a></li>
 			<li><a href="#ytas">8. ytas</a></li>
-			<li><a href="#xtab">9. xtab</a></li>
-			<li><a href="#vrot">10. vrot</a></li>
+			<li><a href="#ytfi">9. ytfi</a></li>
+			<li><a href="#xtab">10. xtab</a></li>
+			<li><a href="#vrot">11. vrot</a></li>
 		</ul>
-		<h3><a href="#udln">B. Treatment Axes</a></h3>
+		<h3><a href="#udln">B. Effects Axes</a></h3>
 		<ul>
-			<li><a href="#udln">11. udln</a></li>
-			<li><a href="#shdw">12. shdw</a></li>
-			<li><a href="#refl">13. refl</a></li>
-			<li><a href="#otln">14. otln</a></li>
-			<li><a href="#engr">15. engr</a></li>
-			<li><a href="#embo">16. embo</a></li>
+			<li><a href="#udln">12. udln</a></li>
+			<li><a href="#shdw">13. shdw</a></li>
+			<li><a href="#refl">14. refl</a></li>
+			<li><a href="#otln">15. otln</a></li>
+			<li><a href="#engr">16. engr</a></li>
+			<li><a href="#embo">17. embo</a></li>
 		</ul>
 		<h3><a href="#ytch">C. Non-Latin Axes</a></h3>
 		<ul>
-			<li><a href="#ytch">17. ytch</a></li>
-			<li><a href="#xtch">18. xtch</a></li>
+			<li><a href="#ytch">18. ytch</a></li>
+			<li><a href="#xtch">19. xtch</a></li>
 		</ul>
 		<h3><a href="#rxad">D. Motion Axes</a></h3>
 		<ul>
-			<li><a href="#rxad">19. rxad</a></li>
-			<li><a href="#ryad">20. ryad</a></li>
-			<li><a href="#rsec">21. rsec</a></li>
+			<li><a href="#rxad">20. rxad</a></li>
+			<li><a href="#ryad">21. ryad</a></li>
+			<li><a href="#rsec">22. rsec</a></li>
 		</ul>
 		<h3><a href="#vuid">E. Glyph Axes</a></h3>
 		<ul>
-			<li><a href="#vuid">22. vuid</a></li>
-			<li><a href="#votf">23. votf</a></li>
+			<li><a href="#vuid">23. vuid</a></li>
+			<li><a href="#votf">24. votf</a></li>
 		</ul>
-		
+
 	</aside>
 
 	<div class="content-main">
-		
+
 		<a class="content-options-show-filters" href="#">Filters</a>
-		
+
 		<article class="article-utility">
-			
+
 			<section class="section-article">
-		
+
 				<h2>Variations Proposal Introduction</h2>
 
 				<p>This guide was prepared in July 2017 for presentation to the public, the specification’s owners, and the OpenType Variations working group. Our goal is to record what we have learned about variable fonts and have put into practice, which we believe will be generally useful to the specification, and to propose a new, systematic approach to registering and using axes.</p>
@@ -135,29 +136,29 @@
 				<h3>E. Glyph Axes</h3>
 				<p>The existing OpenType specification allows composites—i.e., reference from a glyph to use another glyph, possibly repositioned or otherwise transformed—to save space and time when developing fonts that repeatedly use the same shape. </p>
 				<p>In traditional typefounding, a font developer would not hesitate to create fractions by using a glyph from a smaller master of the same style. In variable fonts, using the same contours of a glyph repeatedly (with deltas for weight, width, and optical size) opens up the possibility of using those and other instances for many such purposes, but only if the developer can pinpoint the instance location ​​of particular glyphs, or glyphs of a particular feature, along a registered axis.</p>
-			
+
 				<hr>
-				
+
 				<div id='variations-guide-populate-me'>
 				</div>
-				
+
 			</section>
-			
+
 		</article>
-		
+
 		<footer class="footer-global">
 			<p>&copy; Copyright Font Bureau 2017. All Rights Reserved.</p>
 		</footer>
-		
+
 	</div>
-	
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-78231280-2"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
-	
+
 	  gtag('config', 'UA-78231280-2');
 	</script>
 
